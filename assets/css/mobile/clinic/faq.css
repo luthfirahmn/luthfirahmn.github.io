@@ -1,0 +1,22 @@
+@media only screen and (max-width: 768px) {
+    .head {
+        font-size: 30px;
+    }
+
+    .desc {
+        text-align: justify !important;
+        padding: 0 !important;
+    }
+
+    .question {
+        font-size: 22px !important;
+    }
+
+
+    .answer {
+        font-size: 18px !important;
+        text-align: justify !important;
+
+    }
+
+}

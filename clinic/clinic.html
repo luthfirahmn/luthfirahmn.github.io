@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VZUU</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+  <!-- global style -->
+  <link href="../assets/global.css" rel="stylesheet">
+
+  <!-- this page css -->
+  <link href="../assets/css/index.css" rel="stylesheet">
+  <link href="../assets/css/mobile/clinic/clinic.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #f1c3ce -5%, #fcf7f2, transparent 30%);
+    }
+
+    .clinic-info {
+      text-align: left;
+    }
+
+    .clinic-info h5 {
+      color: #b01234;
+      font-weight: bold;
+    }
+
+    .clinic-info p {
+      margin: 0;
+    }
+
+    .bg-image {
+      background-image: url('../assets/img/bg.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      border: 0;
+      height: 32rem;
+    }
+
+    .custom-images {
+      position: absolute;
+      left: -20px;
+      top: 2rem;
+      width: 35%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .instagram img {
+      height: 300px;
+    }
+
+    .justify-text {
+      text-align: justify;
+    }
+
+    .clinic-info p {
+      text-align: justify;
+    }
+  </style>
+
+</head>
+
+<body>
+  <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+    <img src="../assets/img/whatsapp.png">
+  </a>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="../assets/img/logo-klinik.png" alt="Vzuu Clinic Logo" class="img-fluid" style="max-width: 150px;">
+      </a>
+      <!-- Navbar Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-label="Close"></button>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Tentang Vzuu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="clinic.html">Tentang Vzuu Clinic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="perawatan.html">Perawatan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq_clinic.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../beauty/beauty.html">Vzuu Beauty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="dropdown">
+          <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+            <img src="../assets/img/ind.png" alt="IDN" width="25" height="18" />
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="../assets/img/ind.png" alt="IDN" width="20" height="15" />
+                <span class="language-text">ID</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="../assets/img/eng.png" alt="EN" width="20" height="18" />
+                <span class="language-text">EN</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div style="margin-top: 2rem;">
+  </div>
+
+  <img draggable="false" src="../assets/img/mask-grey.png" class="custom-images">
+
+  <section id="tentang-vzuu" class="hero container-fluid py-5 ">
+    <div class="container text-center">
+      <div class="align-items-center">
+        <div>
+          <div class="text-center pt-5">
+            <h6 class="mb-3 text-grey text-demibold subhead">Kecantikan Dimulai Di Sini</h6>
+            <h3 class="mb-4 pink text-demibold head">Tentang Klinik Vzuu</h3>
+          </div>
+
+          <div class="carousel slide animatable fadeInUp" id="carousel1" data-bs-ride="carousel">
+            <div class="carousel-inner   w-100">
+              <div class="carousel-item active">
+                <div class="col-lg-4 col-12">
+                  <img class="img-fluid images1 object-fit-fill" src="../assets/img/klinik1.png">
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="col-lg-4 col-12">
+                  <img class="img-fluid images1 object-fit-fill" src="../assets/img/klinik2.png">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-lg-4 col-12">
+                  <img class="img-fluid images1 object-fit-fill" src="../assets/img/klinik3.png">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center float-lg-end arrow-carousel-1 py-2 py-lg-0">
+              <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="container text-center p-10 desc mt-lg-5">
+            <div class="justify-content-center">
+              <p class="fs-6 text-regular ">
+                Vzuu Clinic hadir dengan menyadari kebutuhan untuk memberikan perawatan estetika yang inovatif dan
+                profesional. Sesuai
+                dengan kebutuhan pasien untuk memiliki kulit wajah sehat bercahaya dan tubuh yang proporsional.
+                Dengan menggunakan mesin-mesin berstandar Eropa dan USA yang sudah tersertifikasi oleh FDA, dan
+                Kementerian Kesehatan
+                Indonesia. Kami pastikan pasien akan mendapatkan perawatan dengan kualitas terbaik di Klinik Vzuu.
+              </p>
+
+              <p class="fs-6 text-regular">
+                Tim dokter spesialis estetika dan kecantikan kami telah dipilih secara profesional,
+                baik dari pengetahuan dan pengalaman mereka, yang terpenting, kami adalah orang-orang
+                yang mencintai apa yang kami lakukan di Klinik Vzuu.
+              </p>
+
+              <div class="row justify-content-center mt-5 desc-clinic">
+                <div class="col-md-4 clinic-info mb-4 ps-5">
+                  <h5 class="fw-bold">Klinik Utama</h5>
+                  <p>Vzuu Clinic Aesthetic Center</p>
+                  <p>Ruko Mendrisio Blok B No 2</p>
+                  <p>Gading Serpong - Tangerang</p>
+                  <p class="mt-3"><img src="../assets/img/call-calling.png" alt="Phone icon" class="me-2"
+                      style="width: 16px; height: 16px;">+62 21 2222 4665</p>
+                  <p class="mt-3"><img src="../assets/img/clock.png" alt="Phone icon" class="me-2"
+                      style="width: 16px; height: 16px;">10 am to 6 pm</p>
+                </div>
+                <div class="col-md-4 clinic-info mb-4 ps-5">
+                  <h5 class="fw-bold">Klinik 2</h5>
+                  <p>Vzuu Clinic Aesthetic Center</p>
+                  <p>Ruko Mendrisio Blok B No 2</p>
+                  <p>Gading Serpong - Tangerang</p>
+                  <p class="mt-3"><img src="../assets/img/call-calling.png" alt="Phone icon" class="me-2"
+                      style="width: 16px; height: 16px;">+62 21 2222 4665</p>
+                  <p class="mt-3"><img src="../assets/img/clock.png" alt="Phone icon" class="me-2"
+                      style="width: 16px; height: 16px;">10 am to 6 pm</p>
+                </div>
+                <div class="col-md-4 clinic-info mb-4 ps-5">
+                  <h5 class="fw-bold">Klinik 3</h5>
+                  <p>Vzuu Clinic Aesthetic Center</p>
+                  <p>Ruko Mendrisio Blok B No 2</p>
+                  <p>Gading Serpong - Tangerang</p>
+                  <p class="mt-3"><img src="../assets/img/call-calling.png" alt="Phone icon" class="me-2"
+                      style="width: 16px; height: 16px;">+62 21 2222 4665</p>
+                  <p class="mt-3"><img src="../assets/img/clock.png" alt="Phone icon" class="me-2"
+                      style="width: 16px; height: 16px;">10 am to 6 pm</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="d-flex justify-content-center reserv-button" style="margin-top: 5rem;">
+      <a href="https://www.whatsapp.com/" target="_blank" class="btn mt-3 px-4"
+        style="border-radius: 25px;background-color: #A9576A; color:white">
+        RESERVASI
+      </a>
+    </div>
+  </section>
+  <div class="videos-page" style="height: 556px;  padding: 50px;">
+    <video id="backgroundVideo" class="card-img-top img-fluid rounded-3" autoplay
+      style=" object-fit: fill; width: 100%; height: 100%;">
+      <source src="../assets/video/video.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- <img src="../assets/img/mask-group.png" class="card-img-top img-fluid rounded-5" style="padding: 50px;"
+    alt="fotogroup"> -->
+
+  <section class="services my-5 rounded-3 " style="margin: 50px; ">
+    <div class="carousel slide animatable fadeInUp  " data-min-per-slide="1" id="carousel2" data-bs-ride="carousel">
+      <div class="carousel-inner   w-100">
+        <div class="carousel-item active">
+          <div class="col-lg-12 col-12" style="background: radial-gradient(circle at top left, #f1c3ce -20%, #fcf7f2, transparent 60%),
+        linear-gradient(to top, #F1D0B6 -10%, #fcf7f2, transparent 70%);">
+            <div class="row ">
+              <div class="col-md-5 mb-4 mb-md-0 p-5 mt-4 position-relative">
+                <h6 class="mb-2 text-regular ">MENGAPA VZUU CLINIC</h6>
+                <h3 class="pink text-demibold">Mesin-Mesin <br> Kecantikan Lanjutan</h3>
+                <p class="fs-6 text-regular">
+                  Dengan menggunakan mesin-mesin standar <br>
+                  Eropa dan Amerika Serikat yang diawasi oleh FDA, <br>
+                  Kami memastikan bahwa pasien menerima <br>
+                  perawatan berkualitas terbaik di Klinik Vzuu.
+                </p>
+
+                <div class="position-absolute bottom-0 start-0 end-0 d-flex  justify-content-end p-3">
+                  <button class="bg-transparent border-0" type="button" data-bs-target="#carousel5"
+                    data-bs-slide="prev">
+                    <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="bg-transparent border-0" type="button" data-bs-target="#carousel5"
+                    data-bs-slide="next">
+                    <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <img src="../assets/img/cosmetology.png" width="100%" height="80%" class="img-fluid rounded"
+                  alt="Service Image 1" />
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="col-lg-12 col-12" style="background: radial-gradient(circle at top left, #f1c3ce -20%, #fcf7f2, transparent 60%),
+        linear-gradient(to top, #F1D0B6 -10%, #fcf7f2, transparent 70%);">
+            <div class="row ">
+              <div class="col-md-5 mb-4 mb-md-0 p-5 mt-4 position-relative">
+                <h6 class="mb-2 text-regular ">MENGAPA VZUU CLINIC</h6>
+                <h3 class="pink text-demibold">Mesin-Mesin <br> Kecantikan Lanjutan</h3>
+                <p class="fs-6 text-regular">
+                  Dengan menggunakan mesin-mesin standar <br>
+                  Eropa dan Amerika Serikat yang diawasi oleh FDA, <br>
+                  Kami memastikan bahwa pasien menerima <br>
+                  perawatan berkualitas terbaik di Klinik Vzuu.
+                </p>
+
+                <div class="position-absolute bottom-0 start-0 end-0 d-flex  justify-content-end p-3">
+                  <button class="bg-transparent border-0" type="button" data-bs-target="#carousel2"
+                    data-bs-slide="prev">
+                    <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="bg-transparent border-0" type="button" data-bs-target="#carousel2"
+                    data-bs-slide="next">
+                    <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <img src="../assets/img/cosmetology.png" width="100%" height="80%" class="img-fluid rounded"
+                  alt="Service Image 1" />
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section class="doctors"
+    style="padding: 5rem 0; width: 100%; margin: 0; background: radial-gradient(circle at bottom right, #f1c3ce 1%,#fcf7f2, transparent 30%);">
+    <div class="container animatable fadeInUp">
+      <h6 class="text-center mb-2 text-demibold">DOKTOR KAMI</h6>
+      <h3 class="mb-4 pink text-demibold text-center">Profesional dan Berpengalaman</h3>
+      <p class="text-center text-regular doctors-desc">Tim dokter spesialis estetika dan kecantikan kami telah dipilih
+        secara
+        profesional, baik dari pengetahuan, dan
+        pengalaman mereka, yang terpenting, kami adalah orang-orang yang mencintai apa yang kami lakukan di Klinik Vzuu.
+      </p>
+    </div>
+
+    <style>
+      .doctor:hover {
+        transform: scale(1.1);
+      }
+    </style>
+    <div class="row justify-content-center mt-5 gap-4 animatable fadeInUp">
+      <div class="col-md-3 col-sm-6 text-center me-4 p-0 shadow-lg doctor"
+        style="background: #7A6D65; border-radius: 5px; cursor: pointer; width: 270px;" onclick="modalDoctor()">
+        <div style="background: radial-gradient(circle, #DBB8A1, #EEDBCC); border-radius: 5px 5px 0 0;">
+          <img src="../assets/img/dokter.png" class="img-fluid" alt="Doctor 1" />
+        </div>
+        <div class="pt-3 text-white lh-1">
+          <h5 class="text-demibold text16">dr. Benedicta Michelle</h5>
+          <p class="text-regular text16">Aesthetic Physician</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 text-center me-4 p-0 shadow-lg doctor"
+        style="background: #7A6D65; border-radius: 5px; cursor: pointer; width: 270px;" onclick="modalDoctor()">
+        <div style="background: radial-gradient(circle, #DBB8A1, #EEDBCC); border-radius: 5px 5px 0 0;">
+          <img src="../assets/img/dokter.png" class="img-fluid" alt="Doctor 1" />
+        </div>
+        <div class="pt-3 text-white lh-1">
+          <h5 class="text-demibold text16">dr. Benedicta Michelle</h5>
+          <p class="text-regular text16">Aesthetic Physician</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 text-center me-4 p-0 shadow-lg doctor"
+        style="background: #7A6D65; border-radius: 5px; cursor: pointer; width: 270px;" onclick="modalDoctor()">
+        <div style="background: radial-gradient(circle, #DBB8A1, #EEDBCC); border-radius: 5px 5px 0 0;">
+          <img src="../assets/img/dokter.png" class="img-fluid" alt="Doctor 1" />
+        </div>
+        <div class="pt-3 text-white lh-1">
+          <h5 class="text-demibold text16">dr. Benedicta Michelle</h5>
+          <p class="text-regular text16">Aesthetic Physician</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 10rem;">
+      <h6 class="text-center mb-2 text-demibold">PENGHARGAAN</h6>
+      <h3 class="mb-4 pink text-demibold text-center">Penghargaan Vzuu</h3>
+    </div>
+
+    <div class="carousel slide container " data-min-per-slide="5" id="carousel3" data-bs-ride="carousel">
+      <div class="carousel-inner    w-100 ">
+        <div class="carousel-item active">
+          <div class="col-md-3">
+            <div class="">
+              <img class="img-fluid object-fit-fill" src="../assets/img/award1.png">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class=" ">
+              <img class="img-fluid  object-fit-fill" src="../assets/img/award2.png">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class=" ">
+              <img class="img-fluid  object-fit-fill" src="../assets/img/award3.png">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class=" ">
+              <img class="img-fluid  object-fit-fill" src="../assets/img/award4.png">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class=" ">
+              <img class="img-fluid  object-fit-fill" src="../assets/img/award5.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center arrow-carousel-1 py-2 py-lg-0">
+        <button class="bg-transparent border-0" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+          <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="bg-transparent border-0" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+          <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card bg-image">
+    <div class="card-body pt-5">
+      <div class="container text-grey">
+        <h6 class="text-center mb-2 text-regular">KAMI INGIN MENDENGAR PENDAPAT ANDA</h6>
+        <h3 class="mb-5 text-demibold text-center ">Testimoni Mereka</h3>
+
+        <div class="carousel slide animatable fadeInUp" data-min-per-slide="2" id="carousel4" data-bs-ride="carousel">
+          <div class="carousel-inner w-100">
+            <div class="carousel-item active">
+              <div class="col-lg-6 col-12 ">
+                <div class="card px-lg-5 px-3 py-4 me-lg-5" style="height: 100%; border: 2 #fff; background: radial-gradient(circle at top left, #f1c3ce -20%, #fcf7f2, transparent 100%),
+                      linear-gradient(to top, #F1D0B6 -10%, #fcf7f2);">
+                  <div class=" d-flex align-items-start">
+                    <img src="../assets/img/hellen.png" class="img-fluid rounded-circle me-3" alt="Customer 1"
+                      width="90">
+                    <div>
+                      <h5 class="text-demibold">Hellen</h5>
+                      <p>⭐⭐⭐⭐⭐</p>
+                      <p class="text-regular" style="text-align: justify;">
+                        Alat perawatan terbaik! Vzuu klinik memberikan hasil luar biasa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-lg-6 col-12 ">
+                <div class="card px-lg-5 px-3 py-4 me-lg-5" style="height: 100%; border: 2 #fff; background: radial-gradient(circle at top left, #f1c3ce -20%, #fcf7f2, transparent 100%),
+                      linear-gradient(to top, #F1D0B6 -10%, #fcf7f2);">
+                  <div class=" d-flex align-items-start">
+                    <img src="../assets/img/hellen.png" class="img-fluid rounded-circle me-3" alt="Customer 1"
+                      width="90">
+                    <div>
+                      <h5 class="text-demibold">Hellen</h5>
+                      <p>⭐⭐⭐⭐⭐</p>
+                      <p class="text-regular" style="text-align: justify;">
+                        Alat perawatan terbaik! Vzuu klinik memberikan hasil luar biasa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center float-lg-end arrow-carousel-1 py-3 py-lg-0 pe-lg-5 mt-lg-3 ">
+          <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+            <i class="bi bi-arrow-left" style="color: #fff; font-size: 20px"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+            <i class="bi bi-arrow-right" style="color: #fff; font-size: 20px"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Instagram Section -->
+  <section class="instagram mt-5 ">
+    <div class=" text-center w-100">
+      <h6 class="text-regular ">IKUTI KAMI DI INSTAGRAM</h6>
+      <a href="https://www.instagram.com/vzuubeauty" target="_blank" style="text-decoration: none;">
+        <h3 class="mb-4 text-demibold pink">@vzuubeauty</h3>
+      </a>
+      <div class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner carousel-images w-100">
+          <div class="carousel-item active">
+            <div class="col-md-2">
+              <div class="">
+                <img class="img-fluid object-fit-fill" src="../assets/img/beauty1.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class=" ">
+                <img class="img-fluid  object-fit-fill" src="../assets/img/beauty2.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class=" ">
+                <img class="img-fluid  object-fit-fill" src="../assets/img/beauty3.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class=" ">
+                <img class="img-fluid  object-fit-fill" src="../assets/img/beauty4.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class=" ">
+                <img class="img-fluid  object-fit-fill" src="../assets/img/beauty5.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="position-relative" style="z-index: -1; bottom: -32rem;">
+    <img draggable="false" src="../assets/img/mask-grey-r.png" alt="Background Image"
+      class=" img-fluid background-img position-absolute bottom-0 end-0" />
+  </div>
+
+  <footer class="footer">
+    <div class="row justify-content-center position-relative px-5 animatable bounceInLeft" style="margin-top: -6rem">
+      <div id="newsletter" class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+        <div class="newsletter-box p-4" style="background-color: #CEC1B9;width: 100%;">
+          <h5 class="text-brown text-demibold mb-3 lh-base ">
+            Daftar <br> Newsletter Kami
+          </h5>
+          <div class="input-group">
+            <input type="email" class="form-control rounded-pill me-2 text-grey" placeholder="Masukkan email Anda" />
+            <button class="btn btn-secondary rounded-pill" style="background-color: #7A6D65;" type="button">
+              BERLANGGANAN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container animatable fadeIn">
+      <div class="row" style="margin-top: 15rem">
+        <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+          <img src="../assets/img/vzuu.png" class="mb-4" />
+          <p class="text-medium text-grey">
+            Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+            estetika yang inovatif dan profesional.
+          </p>
+
+          <div class="d-flex flex-column flex-md-row gap-3 mt-6 pink">
+            <div style="margin-right: 20px;">
+              <div>
+                <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                    class="bi bi-instagram pink"></i></a>
+                <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                    class="bi bi-tiktok pink"></i></a>
+                <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                    class="bi bi-youtube pink"></i></a>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                    class="bi bi-instagram pink"></i></a>
+                <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc" target="_blank"
+                  class="me-3"><i class="bi bi-tiktok pink"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem;">
+          <h5 class="text-dark text-uppercase text-demibold mb-3">Navigasi</h5>
+          <div class="row lh-lg text-medium text-grey mt-3">
+            <div class="col-6 col-md-4">
+              <ul class="list-unstyled">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../clinic\clinic.html">Vzuu Clinic</a></li>
+                <li><a href="../beauty\beauty.html">Vzuu Beauty</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <ul class="list-unstyled">
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../beauty\signin.html">Akun</a></li>
+                <li><a href="../hubungi-kami.html">Hubungi Kami</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mt-3 mt-md-0">
+              <ul class="list-unstyled">
+                <li><a href="../beauty/account.html?#konfirmasi">Konfirmasi Pembayaran</a></li>
+                <li><a href="../terms-condition.html">Syarat & Ketentuan</a></li>
+                <li><a href="../privacy.html">Kebijakan Privasi</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+      <p class="text-white m-0 text-regular">
+        2024. Vzuu. All Right Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal  Doctor -->
+  <div class="modal fade" id="modalDoctor" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog" style=" max-width: 400px; ">
+      <div class="modal-content" style="background-color: #FCF7F2;">
+        <div class="modal-body">
+          <button type="button" class="btn-close" style=" position: absolute;
+              top: 15px; /* Adjust top positioning */
+              right: 15px; " data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="row px-5 mt-4">
+            <div class="col-md-12 text-center me-4 p-0 shadow-lg " style="background: #7A6D65; border-radius: 5px; ">
+              <div style="background: radial-gradient(circle, #DBB8A1, #EEDBCC); border-radius: top 5px;">
+                <img src="../assets/img/dokter.png" class="img-fluid  " alt="Doctor 1" />
+              </div>
+              <div class="pt-3 text-white lh-1">
+                <h5 class="text-demibold text16">dr. Benedicta Michelle</h5>
+                <p class="text-regular text16">Aesthetic Physician</p>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 text-start mt-4 p-0">
+              <p class="text-demibold text16 p-0">PENDIDIKAN</p>
+              <ol class="text-regular text16 ">
+                <li>Bachelor of Medicine (S.Ked), University of Indonesia, Indonesia.</li>
+                <li>Bachelor of Medical Science (BMedSc), Melbourne University, Australia.</li>
+              </ol>
+
+              <p class="text-demibold text16">KEAHLIAN</p>
+              <ul class="text-regular text16 ">
+                <li>Face Sculpting (Facial Fillers & Neuromodulator)</li>
+                <li>Dermatologic Lasers and Skin Treatment for Acne, Acne Scars & Pigmentation</li>
+                <li>Energy-Based Tightening Device (Ultherapy)</li>
+                <li>Eye Booster</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../assets/global.js"></script>
+
+<script>
+
+
+
+
+  $(document).ready(function () {
+    var video = $('#backgroundVideo').get(0);
+    video.autoplay = true;
+    video.muted = true; // Ensure the video is muted (common requirement for autoplay)
+    video.controls = false; // Hide video controls
+    video.loop = true;
+    video.play(); // Start playing the video
+  });
+
+  function modalDoctor() {
+    var modals = new bootstrap.Modal($('#modalDoctor'))
+    modals.show();
+  }
+</script>
+
+</html>

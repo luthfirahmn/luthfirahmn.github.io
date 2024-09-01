@@ -1,0 +1,121 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+    /* Mengatur jarak antara item keranjang */
+    position: relative;
+}
+
+.cart-item img {
+    width: 104px;
+}
+
+.cart-item .item-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.item-info {
+    margin-left: 15px;
+    /* Menjaga jarak antara gambar produk dan informasi item */
+}
+
+.item-info p {
+    margin-bottom: 5px;
+    /* Mengatur jarak antara paragraf */
+}
+
+.cart-item .item-price {
+    margin-left: 15px;
+}
+
+.cart-summary {
+    padding: 10px 0;
+}
+
+.promo-banner {
+    background-color: #F2ABBB;
+    color: #fff;
+    /* padding: 5px; */
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-weight: normal;
+    font-size: small;
+}
+
+.suggestions {
+    background-color: #FFEDDA;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.modal.custom-modal .modal-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+}
+
+.modal.custom-modal .modal-content {
+    height: 100%;
+    border-radius: 0;
+    background-color: #FCF7F2;
+}
+
+
+.input-group-capsule {
+    width: 100px;
+    /* Sesuaikan lebar sesuai kebutuhan */
+    border: 1px solid #ccc;
+    /* Menambahkan border luar */
+    border-radius: 50px;
+    /* Membuat bentuk kapsul */
+    overflow: hidden;
+    /* Menghilangkan border dalam */
+}
+
+.btn-capsule,
+.input-capsule {
+    height: 30px;
+    /* Sesuaikan tinggi sesuai kebutuhan */
+    border-radius: 0;
+    /* Membuat bentuk kapsul */
+    border: none;
+    /* Menghilangkan border */
+    width: 25px;
+}
+
+.btn-capsule:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-capsule {
+    text-align: center;
+    /* Menyelaraskan teks di tengah */
+    border-left: none;
+    /* Menghapus border kiri */
+    border-right: none;
+    /* Menghapus border kanan */
+    border-radius: 0;
+    /* Menghapus border radius pada input */
+    background-color: #FCF7F2;
+}
+
+.btn-capsule:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-capsule {
+    background-color: #FCF7F2;
+    /* Ganti dengan warna latar belakang yang diinginkan */
+    color: #000;
+    /* Ganti dengan warna teks yang diinginkan */
+    padding: 0 10px;
+    /* Menyesuaikan padding */
+}

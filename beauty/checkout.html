@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VZUU</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- global style -->
+    <link href="../assets/global.css" rel="stylesheet" />
+
+    <!-- this page css -->
+    <link href="../assets/css/index.css" rel="stylesheet" />
+    <link href="../assets/css/cart.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+
+
+        .checkout-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+
+        .order-summary {
+
+            background-color: #f2abbc40;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .order-summary img {
+            width: 100px;
+        }
+
+        .order-summary .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .order-summary .item-info {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+
+        .order-summary .item-price {
+            text-align: right;
+        }
+
+        .order-summary .total {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btn-checkout {
+            background-color: #333;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .btn-checkout:hover {
+            background-color: #555;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+        }
+
+        .footer a {
+            color: #333;
+        }
+
+        .discount-code {
+            border-radius: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .apply-button {
+            background-color: #7A6D65;
+            border: 2px solid #7A6D65;
+            border-radius: 50px;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn-checkout {
+            background-color: #7A6D65;
+            border: 2px solid #7A6D65;
+            border-radius: 50px;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-transform: uppercase;
+            font-weight: regular;
+        }
+
+        #discountCode::placeholder {
+            color: #545454;
+        }
+    </style>
+</head>
+
+
+<body class="body-gradient">
+
+    <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+        <img src="../assets/img/whatsapp.png">
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Navbar Toggler for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/logo-beauty.png" alt="Vzuu Clinic Logo" class="img-fluid"
+                    style="max-width: 150px;">
+            </a>
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-label="Close"></button>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Tentang Vzuu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../clinic/clinic.html">Vzuu Clinic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="beauty.html">Vzuu Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center ms-3">
+                <a href="javascript:void(0)"" class=" me-3" onclick="toggleSearch()">
+                    <img src="../assets/img/search.svg" alt="Search" style="width: 20px; height: 20px;">
+                </a>
+                <a href="signin.html" class="me-3">
+                    <img src="../assets/img/profile-circle.svg" alt="Search" style="width: 20px; height: 20px;">
+                </a>
+
+                <a href="javascript:void(0)" class="me-3 position-relative" id="cart-link">
+                    <img src="../assets/img/bag-2.svg" id="cart-nav" alt="Search" style="width: 20px; height: 20px;"
+                        onclick="openCart()">
+                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
+                        style="font-size: 10px;">0</span>
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="true">
+                        <img src="../assets/img/ind.png" alt="IDN" width="25" height="18">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="../assets/img/ind.png" alt="IDN" width="20" height="15">
+                                ID
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="../assets/img/eng.png" alt="EN" width="20" height="15">
+                                EN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="searchBox" class="search-box d-flex">
+            <div class="search-container">
+                <i class=" search-icon"></i>
+                <input type="text" placeholder="Search...">
+                <a href="javascript:void(0)" class="search-submit"><i class="fa fa-arrow-right"></i></a>
+
+            </div>
+            <a href="javascript:void(0)" class="search-close" onclick="toggleSearch()"><i class="fa fa-times"></i></a>
+        </div>
+    </nav>
+
+    <div class="container p-0 " style="margin-bottom: 200px;">
+        <div class="text-center pt-5" style="margin-top: 120px; margin-bottom: 20px;">
+            <h6 class=" text-regular text-grey">SEDIKIT LAGI!</h6>
+            <h3 class="pink text-demibold">
+                Checkout
+            </h3>
+        </div>
+        <div class="row p-4 p-lg-0">
+
+            <div class="col-md-6 d-lg-none ">
+                <div class="order-summary">
+                    <h5 class="text-demibold text-grey mb-4">Order Summary</h5>
+                    <div id="order-items-container">
+                        <!-- Items akan diisi di sini -->
+                    </div>
+                    <div class="mt-5">
+                        <div class="d-flex">
+                            <input type="text" class="form-control bg-white" id="discountCode"
+                                placeholder="Discount Code">
+                            <button class="custom-button-brown ms-4 rounded-5" type="button">APPLY</button>
+                        </div>
+                    </div>
+
+                    <div class="item d-flex justify-content-between text-grey mt-5 ">
+                        <h6 class="text18 text-medium ">Subtotal</h6>
+                        <h6 class="text16 text-demibold" id="subtotal">Rp 0</h6>
+                    </div>
+                    <hr>
+                    <div class="item d-flex justify-content-between text-grey">
+                        <h6 class="text18 text-medium">Pengiriman</h6>
+                        <h6 class="text16 text-demibold">Rp 10.000</h6>
+                    </div>
+                    <hr>
+                    <div class="item d-flex justify-content-between text-grey">
+                        <h6 class="text18 text-medium">Diskon</h6>
+                        <h6 class="text16 text-demibold" id="discount">-</h6>
+                    </div>
+                    <hr>
+                    <div class="item d-flex justify-content-between text-grey">
+                        <h6 class="text18 text-medium">Total</h6>
+                        <h6 class="text16 text-demibold" id="total">Rp 0</h6>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <h6 class="text-demibold text-grey my-5">Sudah memiliki akun? <a href="" class="text-brown">MASUK</a>
+            </h6>
+            <div class="col-md-6">
+
+                <h5 class="text-demibold text-grey mb-4">Alamat tagihan (Pelanggan Baru)</h5>
+                <form>
+                    <div class="mb-3 row">
+                        <div class="col-md-6">
+                            <label for="firstName" class=" text-grey text-medium required">Nama Depan</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class=" text-grey text-medium required">Nama Belakang</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class=" text-grey text-medium required">Alamat</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class=" text-grey text-medium required">Kota</label>
+                        <select class="form-select" id="city" required>
+                            <option selected disabled value="">Pilih Kota</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <!-- Add more cities as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="province" class=" text-grey text-medium required">Provinsi</label>
+                        <select class="form-select" id="province" required>
+                            <option selected disabled value="">Pilih Provinsi</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="Jawa Timur">Jawa Timur</option>
+                            <option value="DKI Jakarta">DKI Jakarta</option>
+                            <!-- Add more provinces as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class=" text-grey text-medium required">Negara</label>
+                        <select class="form-select" id="country" required>
+                            <option selected disabled value="">Pilih Negara</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postalCode" class=" text-grey text-medium required">Kode Pos</label>
+                        <input type="text" class="form-control" id="postalCode" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNumber" class=" text-grey text-medium required">Nomor HP</label>
+                        <input type="tel" class="form-control" id="phoneNumber" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class=" text-grey text-medium required">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class=" text-grey text-medium required">Create Account
+                            Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+
+                    <h6 class="text-brown text-demibold mt-5">Pembayaran</h6>
+                    <h6 class="text-brown text-medium mt-3">Pembayaran melalui Midtrans (Transfer Bank, Kartu
+                        Kredit,
+                        GoPay). Semua transaksi terlindungi dan terenkripsi</h6>
+                    <a type="button" href="./payment-success.html" class="custom-button-brown mt-4"
+                        onclick="paymentDone()">BAYAR
+                        SEKARANG</a>
+                </form>
+            </div>
+            <div class="col-md-6 d-none ">
+                <div class="order-summary">
+                    <h5 class="text-demibold text-grey mb-4">Order Summary</h5>
+                    <div id="order-items-container">
+                        <!-- Items akan diisi di sini -->
+                    </div>
+                    <div class="mt-5">
+                        <div class="d-flex">
+                            <input type="text" class="form-control bg-white" id="discountCode"
+                                placeholder="Discount Code">
+                            <button class="custom-button-brown ms-4 rounded-5" type="button">APPLY</button>
+                        </div>
+                    </div>
+
+                    <div class="item d-flex justify-content-between text-grey mt-5 ">
+                        <h6 class="text18 text-medium ">Subtotal</h6>
+                        <h6 class="text16 text-demibold" id="subtotal">Rp 0</h6>
+                    </div>
+                    <hr>
+                    <div class="item d-flex justify-content-between text-grey">
+                        <h6 class="text18 text-medium">Pengiriman</h6>
+                        <h6 class="text16 text-demibold">Rp 10.000</h6>
+                    </div>
+                    <hr>
+                    <div class="item d-flex justify-content-between text-grey">
+                        <h6 class="text18 text-medium">Diskon</h6>
+                        <h6 class="text16 text-demibold" id="discount">-</h6>
+                    </div>
+                    <hr>
+                    <div class="item d-flex justify-content-between text-grey">
+                        <h6 class="text18 text-medium">Total</h6>
+                        <h6 class="text16 text-demibold" id="total">Rp 0</h6>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="position-relative" style="z-index: -1; bottom: -25rem;">
+        <img draggable="false" src="../assets/img/mask-grey-r.png" alt="Background Image"
+            class=" img-fluid background-img position-absolute bottom-0 end-0" />
+    </div>
+
+    <footer class="footer">
+        <div class="row justify-content-center position-relative px-5 animatable bounceInLeft"
+            style="margin-top: -6rem">
+            <div id="newsletter"
+                class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+                <div class="newsletter-box p-4" style="background-color: #CEC1B9;width: 100%;">
+                    <h5 class="text-brown text-demibold mb-3 lh-base ">
+                        Daftar <br> Newsletter Kami
+                    </h5>
+                    <div class="input-group">
+                        <input type="email" class="form-control rounded-pill me-2 text-grey"
+                            placeholder="Masukkan email Anda" />
+                        <button class="btn btn-secondary rounded-pill" style="background-color: #7A6D65;" type="button">
+                            BERLANGGANAN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container animatable fadeInUp">
+            <div class="row" style="margin-top: 15rem">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="../assets/img/vzuu.png" class="mb-4" />
+                    <p class="text-medium text-grey">
+                        Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+                        estetika yang inovatif dan profesional.
+                    </p>
+
+                    <div class="d-flex flex-column flex-md-row gap-3 mt-6 pink">
+                        <div style="margin-right: 20px;">
+                            <div>
+                                <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                                        class="bi bi-instagram pink"></i></a>
+                                <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                                        class="bi bi-tiktok pink"></i></a>
+                                <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                                <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                                        class="bi bi-youtube pink"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                                        class="bi bi-instagram pink"></i></a>
+                                <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc"
+                                    target="_blank" class="me-3"><i class="bi bi-tiktok pink"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem;">
+                    <h5 class="text-dark text-uppercase text-demibold mb-3">Navigasi</h5>
+                    <div class="row lh-lg text-medium text-grey mt-3">
+                        <div class="col-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li><a href="../index.html">Beranda</a></li>
+                                <li><a href="../clinic\clinic.html">Vzuu Clinic</a></li>
+                                <li><a href="beauty.html">Vzuu Beauty</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li><a href="../blog.html">Blog</a></li>
+                                <li><a href="signin.html">Akun</a></li>
+                                <li><a href="../hubungi-kami.html">Hubungi Kami</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0">
+                            <ul class="list-unstyled">
+                                <li><a href="account.html?#konfirmasi">Konfirmasi Pembayaran</a></li>
+                                <li><a href="../terms-condition.html">Syarat & Ketentuan</a></li>
+                                <li><a href="../privacy.html">Kebijakan Privasi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+            <p class="text-white m-0 text-regular">
+                2024. Vzuu. All Right Reserved.
+            </p>
+        </div>
+    </footer>
+
+
+
+    <div id="cartModal" class="modal fade custom-modal" tabindex="-1" aria-labelledby="cartModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="promo-banner">
+                    <h6 class="text-medium p-3 fs-6" style="font-size: medium;">Hemat 10% bagi pelanggan baru dengan
+                        kode
+                        WELCOME10</h6>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn-close" style="position: absolute; top: 15px; right: 15px;"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h6 class="mb-4"><span class="fs-5 text-demibold text-grey">Keranjang</span> <span
+                            class="fs-6 text-medium text-grey" id="cart-items-count">(0 items)</span></h6>
+                    <div id="cart-items-container">
+                    </div>
+                    <hr>
+                    <div class="suggestions mt-4">
+                        <h5 class="text-regular text-grey">LENGKAPI RITUAL KECANTIKAN ANDA</h5>
+                        <div class="d-flex align-items-center justify-content-center mt-3">
+                            <img src="../assets/img/172.png" alt="Suggested Product">
+                            <div class="ms-3 w-75">
+                                <h6 class="text-grey text-demibold">Mild & Deep Cleansing Pad</h6>
+                                <p class="text-brown text-demibold">Rp 479.000,00</p>
+                            </div>
+                            <button class="ms-auto custom-button-brown" onclick="checkout(1,1)">TAMBAH</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center text-center">
+                    <a href="./checkout.html" type="button" class="custom-button-brown text-regular w-100"
+                        style="padding: 10px 40px 10px 40px;" id="checkout-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="../assets/global.js"></script>
+<script src="../assets/js/cart.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        function updateOrderSummary() {
+            const existingCheckout = JSON.parse(localStorage.getItem('checkout')) || [];
+
+            const $orderItemsContainer = $('#order-items-container');
+            const $subtotal = $('#subtotal');
+            const $total = $('#total');
+            const $discount = $('#discount');
+
+            $orderItemsContainer.empty();
+
+            let subtotalAmount = 0;
+            let totalAmount = 0;
+            const shippingCost = 10000;
+            const discount = 0;
+
+            existingCheckout.forEach(item => {
+                const itemElement = $(`
+                <div class="item mb-4 d-flex align-items-center">
+                    <div class ="me-3 position-relative">
+                    <img src="${item.img}" alt="Product" width="100">
+                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill " style="font-size: 10px;background: grey;">${$('#cart-badge').text()}</span>
+                    </div>
+                    <div class="item-info ms-3">
+                        <h6 class="text-demibold text-grey">${item.name}</h6>
+                        <span class="text-reguler text-grey text14">Size: ${item.size}</span>
+                    </div>
+                    <div class="item-price ms-auto text-end">
+                        <h6 class="text-demibold " style="color:#A9576A">Rp ${item.price.toLocaleString()}</h6>
+                    </div>
+                </div>
+            `);
+
+                $orderItemsContainer.append(itemElement);
+                subtotalAmount += item.price * item.quantity;
+            });
+
+            totalAmount = subtotalAmount + shippingCost - discount;
+
+            $subtotal.text(`Rp ${subtotalAmount.toLocaleString()}`);
+            $total.text(`Rp ${totalAmount.toLocaleString()}`);
+            $discount.text(discount ? `Rp ${discount.toLocaleString()}` : '-');
+        }
+
+        updateOrderSummary();
+    });
+
+</script>
+
+</html>

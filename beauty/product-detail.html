@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VZUU</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- global style -->
+    <link href="../assets/global.css" rel="stylesheet" />
+
+    <!-- this page css -->
+    <link href="../assets/css/index.css" rel="stylesheet" />
+    <link href="../assets/css/cart.css" rel="stylesheet" />
+    <link href="../assets/css/mobile/beauty/product-detail.css" rel="stylesheet" />
+
+    <style>
+        .brown-stars {
+            color: #7A6D65;
+            font-size: 24px;
+            /* Ukuran font */
+            /* Warna coklat */
+        }
+
+        .best-seller {
+            background-color: white;
+            color: #A9576A;
+            border: 1px solid #A9576A;
+            padding: 4px 8px;
+            border-radius: 10px 0 20px 0;
+            font-weight: 700;
+            font-family: 'Avenir', sans-serif;
+            font-size: 12px
+        }
+
+        .tab-content {
+            margin-top: 20px;
+        }
+
+        .thumbnails img {
+            width: 125px;
+            height: auto;
+            max-width: 78px;
+            cursor: pointer;
+        }
+
+        .thumbnails .active img {
+            border: 2px solid #FF4F95;
+        }
+
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thumbnails .col-2 {
+            margin-bottom: 50px;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .custom-tab .nav-link {
+            /* background-color: white; */
+            color: black;
+            border-radius: 50px;
+        }
+
+        .custom-tab .nav-link.active {
+            background-color: #A9576A;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .custom-btn {
+            border: 2px solid #7A6D65;
+            color: #7A6D65;
+            background-color: transparent;
+        }
+
+        .custom-btn:hover {
+            background-color: #7A6D65;
+            color: white;
+        }
+
+        .custom-2 {
+            background-color: #545454;
+            /* Warna latar belakang */
+            color: #fff;
+            /* Warna teks */
+            border: none;
+            /* Menghapus border default */
+            border-radius: 50px;
+            /* Membuat bentuk kapsul */
+            border-color: #7a6d65;
+            padding: 10px 20px;
+            /* Menyesuaikan padding sesuai kebutuhan */
+            text-align: center;
+            /* Menyelaraskan teks di tengah */
+            display: inline-block;
+            /* Menjaga ukuran tombol sesuai konten */
+            cursor: pointer;
+            /* Mengubah kursor saat hover */
+            font-size: 0.875rem;
+            /* Sesuaikan ukuran font sesuai kebutuhan */
+        }
+
+        .custom-2:hover {
+            background-color: #434343;
+            /* Warna latar belakang saat hover (opsional) */
+        }
+
+
+        .btn-outline-secondary.custom {
+            color: rgba(122, 109, 101, 0.5);
+            border-color: rgba(122, 109, 101, 0.2);
+            border-radius: 50px;
+            margin: 5px;
+        }
+
+        .btn-outline-secondary.custom-2 {
+            color: rgba(122, 109, 101, 0.5);
+            border-color: rgba(122, 109, 101, 0.2);
+            border-radius: 50px;
+            margin: 5px;
+        }
+
+        .btn-outline-secondary.custom:hover,
+        .btn-outline-secondary.custom:active,
+        .btn-outline-secondary.custom:checked {
+            color: rgba(122, 109, 101, 0.8);
+            border-color: rgba(122, 109, 101, 0.8);
+            background-color: rgba(122, 109, 101, 0.1);
+        }
+    </style>
+
+</head>
+
+<body class="body-gradient">
+
+    <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+        <img src="../assets/img/whatsapp.png">
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Navbar Toggler for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/logo-beauty.png" alt="Vzuu Clinic Logo" class="img-fluid"
+                    style="max-width: 150px;">
+            </a>
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-label="Close"></button>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Tentang Vzuu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../clinic/clinic.html">Vzuu Clinic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="beauty.html">Vzuu Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center ms-3">
+                <a href="javascript:void(0)" class=" me-3" onclick="toggleSearch()">
+                    <img src="../assets/img/search.svg" alt="Search" style="width: 20px; height: 20px;">
+                </a>
+                <a href="signin.html" class="me-3">
+                    <img src="../assets/img/profile-circle.svg" alt="Search" style="width: 20px; height: 20px;">
+                </a>
+
+                <a href="javascript:void(0)" class="me-3 position-relative" id="cart-link">
+                    <img src="../assets/img/bag-2.svg" id="cart-nav" alt="Search" style="width: 20px; height: 20px;"
+                        onclick="openCart()">
+                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
+                        style="font-size: 10px;">0</span>
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="true">
+                        <img src="../assets/img/ind.png" alt="IDN" width="25" height="18">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="../assets/img/ind.png" alt="IDN" width="20" height="15">
+                                ID
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="../assets/img/eng.png" alt="EN" width="20" height="15">
+                                EN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="searchBox" class="search-box d-flex">
+            <div class="search-container">
+                <i class=" search-icon"></i>
+                <input type="text" placeholder="Search...">
+                <a href="javascript:void(0)" class="search-submit"><i class="fa fa-arrow-right"></i></a>
+
+            </div>
+            <a href="javascript:void(0)" class="search-close" onclick="toggleSearch()"><i class="fa fa-times"></i></a>
+        </div>
+    </nav>
+
+    <img src="../assets/img/mask-grey.png" style="z-index: -1; position: absolute; ">
+
+    <div style="margin-top: 7rem;">
+
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="carousel slide animatable fadeInUp d-lg-none mb-3" id="carousel1" data-bs-ride="carousel">
+                <div class="carousel-inner   w-100">
+                    <div class="carousel-item active">
+                        <div class="col-lg-4 col-12">
+                            <img class="img-fluid images1 object-fit-fill" src="../assets/img/facial-cleaning.png">
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="col-lg-4 col-12">
+                            <img class="img-fluid images1 object-fit-fill" src="../assets/img/beauty2.png">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-4 col-12">
+                            <img class="img-fluid images1 object-fit-fill" src="../assets/img/beauty3.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center float-end arrow-carousel-1 py-2 py-lg-0">
+                    <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1"
+                        data-bs-slide="prev">
+                        <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1"
+                        data-bs-slide="next">
+                        <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-lg-flex d-lg-block d-none">
+                <div class="thumbnail-sidebar me-3">
+                    <div class=" thumbnails animatable fadeInUp">
+                        <div class="col-12 mb-2">
+                            <img src="../assets/img/facial-cleaning.png" class="img-fluid"
+                                data-bs-target="#productCarousel" data-bs-slide-to="0" alt="Thumbnail 1">
+                        </div>
+                        <div class="col-12 mb-2">
+                            <img src="../assets/img/beauty2.png" class="img-fluid" data-bs-target="#productCarousel"
+                                data-bs-slide-to="1" alt="Thumbnail 2">
+                        </div>
+                        <div class="col-12 mb-2">
+                            <img src="../assets/img/beauty3.png" class="img-fluid" data-bs-target="#productCarousel"
+                                data-bs-slide-to="2" alt="Thumbnail 3">
+                        </div>
+                        <div class="col-12 mb-2">
+                            <img src="../assets/img/beauty1.png" class="img-fluid" data-bs-target="#productCarousel"
+                                data-bs-slide-to="3" alt="Thumbnail 4">
+                        </div>
+                        <div class="col-12 mb-2">
+                            <img src="../assets/img/beauty2.png" class="img-fluid" data-bs-target="#productCarousel"
+                                data-bs-slide-to="4" alt="Thumbnail 5">
+                        </div>
+                        <div class="col-12 mb-2">
+                            <img src="../assets/img/beauty3.png" class="img-fluid" data-bs-target="#productCarousel"
+                                data-bs-slide-to="0" alt="Thumbnail 1">
+                        </div>
+                    </div>
+                </div>
+                <div id="productCarousel" class="carousel slide animatable fadeInUp" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../assets/img/facial-cleaning.png" class="d-block "
+                                style="width:450px; height: 530px;" alt="Main Product Image">
+                        </div>
+                    </div>
+
+                    <div class="d-flex float-end " style="margin-top: 10px;">
+                        <button class="bg-transparent border-0" type="button" id="prevThumbnail">
+                            <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="bg-transparent border-0" type="button" id="nextThumbnail">
+                            <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 animatable fadeInUp">
+                <h6 class="text-regular text-uppercase text-grey">Kapas Pembersih</h6>
+                <h3 class="pink">VZUU Mild & Deep Cleansing Pad</h3>
+                <div class="d-flex align-items-center">
+                    <div class="rating">
+                        <span class="brown-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <span class="ms-2 text-demibold fs-4">5</span><span>/5</span>
+                    <span class=" best-seller ms-4">BEST SELLER!</span>
+                </div>
+                <h5 class="text-grey py-2 text-demibold">Rp 479,000.00</h5>
+                <p>
+                <div class="text-regular text-detail">Pembersihan mendalam kami dirancang secara ahli <br>
+                    untuk menghilangkan makeup dan kotoran harian sambil membuka pori <br>
+                    dan meningkatkan tekstur kulit tanpa iritasi. Menggabungkan kekuatan pembersih
+                    dan penghapus makeup, tekstur lembut dari <br> pad ini memecah dan mengangkat makeup dengan mudah.
+                    </p>
+                </div>
+                <style>
+                    .btn-check {
+                        display: none;
+                    }
+
+                    .btn-ukuran {
+
+                        text-decoration: none;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #7A6D65;
+                        font-family: 'Avenir', sans-serif;
+                        padding: 10px 25px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        border: 1px solid transparent;
+                        display: inline-block;
+                        text-align: center;
+                        white-space: nowrap;
+
+                        background-color: transparent;
+                        color: #7A6D65;
+                        border-color: #7A6D65;
+                    }
+
+                    .btn-ukuran:hover {
+                        background-color: #7a6d659f;
+                        color: #fff;
+                        display: inline-block;
+                    }
+
+                    .btn-check:checked+.btn-ukuran {
+                        background-color: #7A6D65;
+                        color: #fff;
+                        border-color: #7A6D65;
+                    }
+                </style>
+                <div class="mb-3">
+                    <p class="mb-1">Ukuran</p>
+                    <div class="btn-group" role="group" aria-label="Size selection">
+                        <input type="radio" class="btn-check" name="size" id="size150" value="150" checked>
+                        <label class=" btn-ukuran" for="size150">150 gr</label>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Size selection">
+                        <input type="radio" class="btn-check" name="size" id="size250" value="250">
+                        <label class=" btn-ukuran" for="size250">250 gr</label>
+                    </div>
+                </div>
+
+
+                <p class="mb-1">Jumlah</p>
+                <div class="input-group input-group-capsule mb-3">
+                    <button class="btn btn-capsule" type="button">-</button>
+                    <input id="jumlah" type="text" class="form-control input-capsule" min="1" value="1">
+                    <button class="btn btn-capsule" type="button" style="padding: 4px;">+</button>
+                </div>
+                <div class="mt-3">
+                    <button type="button" class=" mt-3 custom-button-brown text-regular"
+                        onclick="checkout(1,document.getElementById('jumlah').value),openCart()">
+                        <i class="fa-sharp fa-solid fa-bag-shopping me-2"></i> TAMBAH KE KERANJANG
+                    </button>
+                    <button type="button" class=" mt-3 custom-button-brown-outline text-regular"
+                        onclick="modalMarketplace()">
+                        <i class="fas fa-store me-2"></i> BELI DI MARKETPLACE
+                    </button>
+                </div>
+            </div>
+            <hr class="mt-5" style="border-top: 1px solid #ccc;">
+
+            <div class="d-flex justify-content-center align-items-center flex-column animatable fadeInUp">
+                <ul class="nav nav-pills custom-tab mt-4 d-none d-lg-block" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="benefits-tab" data-bs-toggle="tab"
+                            data-bs-target="#benefits" type="button" role="tab" aria-controls="benefits"
+                            aria-selected="true">Manfaat Produk</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients"
+                            type="button" role="tab" aria-controls="ingredients" aria-selected="false">Bahan
+                            Utama</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
+                            data-bs-target="#instructions" type="button" role="tab" aria-controls="instructions"
+                            aria-selected="false">Petunjuk
+                            Penggunaan</button>
+                    </li>
+                </ul>
+
+                <div class="carousel   slide mt-4 d-lg-none " id="carousel2" data-min-per-slide="1" id="myTab"
+                    role="tablist" style="width: 100%;">
+                    <div class="carousel-inner  d-flex">
+
+                        <button class="carousel-control-prev bg-transparent" data-bs-target="#carousel2"
+                            data-bs-slide="prev">
+                            <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px;"></i>
+                            <span class=" visually-hidden">Previous</span>
+                        </button>
+                        <div class="carousel-inner w-100">
+                            <div class="carousel-item  active">
+
+                                <div class="text-container active " data-bs-toggle="tab" data-bs-target="#benefits"
+                                    type="button" role="tab" aria-controls="benefits" aria-selected="true">Manfaat
+                                    Produk</div>
+                            </div>
+                            <div class="carousel-item ">
+
+                                <div class="text-container  " data-bs-toggle="tab" data-bs-target="#ingredients"
+                                    type="button" role="tab" aria-controls="ingredients" aria-selected="false">Bahan
+                                    Utama</div>
+                            </div>
+                            <div class="carousel-item ">
+
+                                <div class="text-container  " data-bs-toggle="tab" data-bs-target="#instructions"
+                                    type="button" role="tab" aria-controls="instructions" aria-selected="false">Petunjuk
+                                    Penggunaan</div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-next bg-transparent" data-bs-target="#carousel2"
+                            data-bs-slide="next">
+                            <i class="bi bi-arrow-right"
+                                style="color: #545454; font-size: 20px; background-color: transparent;"></i>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="myTabContent" style="margin-top: 30px;">
+                    <div class="tab-pane fade show active" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">
+                        <ul class="text-cat">
+                            <li>Pembersihan Mendalam: Menghilangkan makeup dan kotoran tanpa meninggalkan residu.
+                            </li>
+                            <li>Anti-inflamasi & Anti-mikroba: Membantu mengurangi peradangan dan mencegah
+                                pertumbuhan
+                                mikroba.</li>
+                            <li>Kaya Antioksidan: Melindungi kulit dari kerusakan lingkungan.</li>
+                            <li>Melembapkan & Menenangkan: Dilengkapi dengan bahan yang menjaga kulit tetap
+                                terhidrasi
+                                dan tenang.</li>
+                            <li>Lembut di Kulit: Formula tidak menyebabkan iritasi, cocok untuk kulit sensitif.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="ingredients" role="tabpanel" aria-labelledby="ingredients-tab">
+                        <ul class="text-cat">
+                            <li>PEG-7 Glyceryl Cocoate + Coco-Glucoside: Duo pembersih yang efektif mengangkat
+                                makeup
+                                dan kotoran, menjadikan kulit
+                                bersih dan segar.</li>
+                            <li>**Air Kelapa (1%):** Dikenal dengan sifat hidrasi, anti-mikroba, dan anti-inflamasi,
+                                membantu menjaga keseimbangan
+                                kelembapan kulit dan mencegah jerawat.</li>
+                            <li>Kaya Antioksidan: Melindungi kulit dari kerusakan lingkungan.</li>
+                            <li>Ekstrak Lidah Buaya: Menenangkan dan melembapkan kulit, memberikan manfaat
+                                antioksidan.
+                            </li>
+                            <li>Sodium Hyaluronate: Mengunci kelembapan, memastikan hidrasi tahan lama dan tekstur
+                                kulit
+                                yang lebih halus.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="instructions" role="tabpanel" aria-labelledby="instructions-tab">
+                        <ol class="text-cat">
+                            <li>Ambil 1-2 Bantalan Pembersih: Keluarkan satu atau dua bantalan dari wadah.</li>
+                            <li>Aplikasi: Usap atau tepuk lembut bantalan pada wajah, mata, dan bibir untuk
+                                menghilangkan makeup dan kotoran.</li>
+                            <li>Tidak Perlu Dibilas: Nikmati kulit yang bersih dan segar tanpa perlu dibilas
+                                setelahnya.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <hr class="px-10" style="border-top: 1px solid #ccc;">
+
+    <div class="row py-5 position-relative">
+        <div class="col-md-6 d-flex align-items-center justify-content-center animatable fadeInUp">
+            <img src="../assets/img/woman.png" class="img-fluid w-50" alt="Image Description">
+        </div>
+
+        <div class="position-absolute text-center" style="top:10rem; left:300px">
+            <p class=" text-regular mb-0">
+                Rasakan Perawatan Kulit Istimewa dengan VZUU <br>Mild & Deep Cleansing Pad.
+            </p>
+            <div class="animatable fadeInUp" style="margin-top:10rem">
+                <img src="../assets/img/skincare2.png" class="img-fluid w-35" alt="Image Description">
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 10rem;">
+        <div class="col-md-6 d-flex align-items-center justify-content-center animatable fadeInUp">
+            <img src="../assets/img/skincare.png" class="img-fluid w-25" alt="Image Description">
+        </div>
+    </div>
+
+    </div>
+
+    <div class="position-relative" style="z-index: -1; bottom: -34rem;">
+        <img draggable="false" src="../assets/img/mask-grey-r.png" alt="Background Image"
+            class=" img-fluid background-img position-absolute bottom-0 end-0" />
+    </div>
+
+    <footer class="footer">
+        <div class="row justify-content-center position-relative px-5 animatable bounceInLeft"
+            style="margin-top: -6rem">
+            <div id="newsletter"
+                class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+                <div class="newsletter-box p-4" style="background-color: #CEC1B9;width: 100%;">
+                    <h5 class="text-brown text-demibold mb-3 lh-base ">
+                        Daftar <br> Newsletter Kami
+                    </h5>
+                    <div class="input-group">
+                        <input type="email" class="form-control rounded-pill me-2 text-grey"
+                            placeholder="Masukkan email Anda" />
+                        <button class="btn btn-secondary rounded-pill" style="background-color: #7A6D65;" type="button">
+                            BERLANGGANAN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container animatable fadeInUp">
+            <div class="row" style="margin-top: 15rem">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="../assets/img/vzuu.png" class="mb-4" />
+                    <p class="text-medium text-grey">
+                        Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+                        estetika yang inovatif dan profesional.
+                    </p>
+
+                    <div class="d-flex flex-column flex-md-row gap-lg-3 mt-6 pink">
+                        <div style="margin-right: 20px;">
+                            <div>
+                                <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                                        class="bi bi-instagram pink"></i></a>
+                                <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                                        class="bi bi-tiktok pink"></i></a>
+                                <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                                <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                                        class="bi bi-youtube pink"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                                        class="bi bi-instagram pink"></i></a>
+                                <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc"
+                                    target="_blank" class="me-3"><i class="bi bi-tiktok pink"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem;">
+                    <h5 class="text-dark text-uppercase text-demibold mb-3">Navigasi</h5>
+                    <div class="row lh-lg text-medium text-grey mt-3">
+                        <div class="col-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li><a href="../index.html">Beranda</a></li>
+                                <li><a href="../clinic\clinic.html">Vzuu Clinic</a></li>
+                                <li><a href="beauty.html">Vzuu Beauty</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li><a href="../blog.html">Blog</a></li>
+                                <li><a href="signin.html">Akun</a></li>
+                                <li><a href="../hubungi-kami.html">Hubungi Kami</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0">
+                            <ul class="list-unstyled">
+                                <li><a href="account.html?#konfirmasi">Konfirmasi Pembayaran</a></li>
+                                <li><a href="../terms-condition.html">Syarat & Ketentuan</a></li>
+                                <li><a href="../privacy.html">Kebijakan Privasi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+            <p class="text-white m-0 text-regular">
+                2024. Vzuu. All Right Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal  MarketPlace -->
+    <div class="modal fade" id="modalMarketplace" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style=" max-width: 768px; ">
+            <div class="modal-content" style="background-color: #FCF7F2;">
+                <div class="modal-body p-5">
+                    <button type="button" class="btn-close" style=" position: absolute;
+                top: 15px; /* Adjust top positioning */
+                right: 15px; " data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+                    <div class="">
+                        <h5 class="text-center text-demibold mb-5">Dapatkan Produk Vzuu Beauty di Marketplace Favorit
+                            Kamu
+                        </h5>
+                        <div class="d-flex justify-content-center align-items-center gap-lg-5 gap-1">
+
+
+                            <div class="">
+                                <div class="bg-transparent d-flex justify-content-center align-items-center rounded-3 "
+                                    style="border: 1px solid #7A6D65; width: 109px; height: 63px;">
+                                    <a target="_blank"
+                                        href="https://shopee.co.id/VZUU-Beauty-Paket-Diamond-Paket-Untuk-Semua-Jenis-Kulit-Brightening-Whitening-Glowing-Moisturizing-6-in-1-i.7919233.19106188636?sp_atk=8ee482ac-1d3f-4047-a964-2ed47a398036&xptdk=8ee482ac-1d3f-4047-a964-2ed47a398036">
+                                        <img src="../assets/icon/shopee.png" width="31.24" height="46.19">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="bg-transparent d-flex justify-content-center align-items-center rounded-3 "
+                                    style="border: 1px solid #7A6D65; width: 109px; height: 63px;">
+                                    <a target="_blank"
+                                        href="https://www.tokopedia.com/search?st=shop&q=vzuu%20skincare">
+                                        <img src="../assets/icon/tokped.png" width="51.63" height="44.92">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="bg-transparent d-flex justify-content-center align-items-center rounded-3 "
+                                    style="border: 1px solid #7A6D65; width: 109px; height: 63px;">
+                                    <a target="_blank" href="https://www.blibli.com/">
+                                        <img src="../assets/icon/blibli.png" width="67" height="22.33">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 
+     -->
+    <div id="cartModal" class="modal fade custom-modal" tabindex="-1" aria-labelledby="cartModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="promo-banner">
+                    <h6 class="text-medium p-3 fs-6" style="font-size: medium;">Hemat 10% bagi pelanggan baru dengan
+                        kode
+                        WELCOME10</h6>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn-close" style="position: absolute; top: 15px; right: 15px;"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h6 class="mb-4"><span class="fs-5 text-demibold text-grey">Keranjang</span> <span
+                            class="fs-6 text-medium text-grey" id="cart-items-count">(0 items)</span></h6>
+                    <div id="cart-items-container">
+                    </div>
+                    <hr>
+                    <div class="suggestions mt-4">
+                        <h5 class="text-regular text-grey">LENGKAPI RITUAL KECANTIKAN ANDA</h5>
+                        <div class="d-flex align-items-center justify-content-center mt-3">
+                            <img src="../assets/img/172.png" alt="Suggested Product">
+                            <div class="ms-3 w-75">
+                                <h6 class="text-grey text-demibold">Mild & Deep Cleansing Pad</h6>
+                                <p class="text-brown text-demibold">Rp 479.000,00</p>
+                            </div>
+                            <button class="ms-auto custom-button-brown" onclick="checkout(1,1)">TAMBAH</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center text-center">
+                    <a href="./checkout.html" type="button" class="custom-button-brown text-regular w-100"
+                        style="padding: 10px 40px 10px 40px;" id="checkout-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="../assets/global.js"></script>
+<script src="../assets/js/cart.js"></script>
+
+<script>
+
+    function modalMarketplace() {
+        var modals = new bootstrap.Modal($('#modalMarketplace'))
+        modals.show();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const thumbnails = Array.from(document.querySelectorAll('.thumbnails .col-12 img'));
+        let currentIndex = 0;
+
+        function updateCarouselImage(index) {
+            const thumbnail = thumbnails[index];
+            const activeCarouselItem = document.querySelector('#productCarousel .carousel-item.active');
+            const carouselImage = activeCarouselItem.querySelector('img');
+            carouselImage.src = thumbnail.src;
+        }
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', function () {
+                currentIndex = index;
+                updateCarouselImage(currentIndex);
+            });
+        });
+
+        const myCarousel = document.getElementById('productCarousel');
+        const carousel = new bootstrap.Carousel(myCarousel, {
+            interval: false
+        });
+
+        document.getElementById('nextThumbnail').addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % thumbnails.length;
+            updateCarouselImage(currentIndex);
+        });
+
+        document.getElementById('prevThumbnail').addEventListener('click', function () {
+            currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+            updateCarouselImage(currentIndex);
+        });
+    });
+
+    $('.input-group-capsule').on('click', '.btn-capsule', function () {
+        var input = $(this).closest('.input-group-capsule').find('.input-capsule');
+        var currentValue = parseInt(input.val());
+
+        if ($(this).text() === '+') {
+            input.val(currentValue + 1);
+        } else if ($(this).text() === '-' && currentValue > 1) {
+            input.val(currentValue - 1);
+        }
+    });
+
+</script>
+
+
+
+</html>

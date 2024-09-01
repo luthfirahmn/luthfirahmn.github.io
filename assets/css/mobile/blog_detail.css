@@ -1,0 +1,36 @@
+@media only screen and (max-width: 768px) {
+
+    .divider {
+        margin-top: 6rem !important;
+    }
+
+    .img-content {
+        border-radius: 10px;
+        height: 200px !important;
+        object-fit: cover;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .tulisan-blog {
+        padding: 0 !important;
+        width: 100% !important;
+        text-align: justify;
+    }
+
+    .tulisan-blog ol {
+        padding: 15px !important;
+        width: 100%;
+    }
+
+    .separator {
+        width: 100% !important;
+    }
+
+
+    .related-blogs {
+        margin-top: 2rem !important;
+    }
+}

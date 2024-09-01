@@ -1,0 +1,100 @@
+@media only screen and (max-width: 768px) {
+
+    .divider {
+        margin-top: 2.5rem !important;
+    }
+
+    .search-span {
+        background-color: white !important;
+    }
+
+    #search-input {
+        background-color: white !important;
+    }
+
+
+    #search-results .card {
+        position: relative;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #search-results .card .card-body {
+        margin: 0 25px 0 25px;
+    }
+}
+
+
+.carousel-inner .carousel-item {
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item .text-container.active {
+    background-color: #a9576a;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.carousel-inner .carousel-item .text-container:hover {
+    background-color: #a9576a;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.text-container {
+    width: 120px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:nth-child(-n+3) {
+        display: block;
+    }
+
+    .carousel-images {
+        height: 200px;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+
+    /* .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(25%) !important;
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-item-prev:not(.carousel-item-end),
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+
+    .carousel-item-next.carousel-item-start,
+    .active.carousel-item-end {
+        transform: translateX(0) !important;
+    }
+
+    .carousel-inner .carousel-item-prev,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    } */
+}

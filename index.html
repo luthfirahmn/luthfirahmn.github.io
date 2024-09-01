@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VZUU</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- global style -->
+  <link href="./assets/global.css" rel="stylesheet" />
+
+  <!-- this page css -->
+  <link href="./assets/css/index.css" rel="stylesheet" />
+  <link href="./assets/css/mobile/index.css" rel="stylesheet" />
+</head>
+
+<style>
+  .video-background {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent !important;
+    background: none !important;
+  }
+
+  .bg-white {
+    --bs-bg-opacity: 0;
+    background-color: transparent !important;
+  }
+
+  .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  #playPauseBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    background: url('./assets/img/button_play.svg') no-repeat center center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+  }
+
+  #playPauseBtn:hover {
+    opacity: 0.75;
+  }
+
+  #playPauseBtn svg {
+    display: none;
+  }
+
+  .top-gradient-background {
+    background:
+      radial-gradient(circle at top left, #f1c3ce -2%, #fcf7f2, transparent 50%);
+  }
+</style>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Center Placeholder -->
+      <div class="d-flex justify-content-center flex-grow-1" style="margin-left: 19%;">
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-label="Close"></button>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#tentang-vzuu">Tentang Vzuu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clinic/clinic.html">Vzuu Clinic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="beauty/beauty.html">Vzuu Beauty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right Side Menu -->
+      <div class="d-flex align-items-center">
+        <div class="dropdown">
+          <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+            <img src="./assets/img/ind.png" alt="IDN" width="25" height="18" />
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item lang-item" href="#" data-lang="id">
+                <img src="./assets/img/ind.png" alt="IDN" width="20" height="15" />
+                <span class="language-text">ID</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item lang-item" href="#" data-lang="en">
+                <img src="./assets/img/eng.png" alt="EN" width="20" height="18" />
+                <span class="language-text">EN</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <style>
+    @media (min-width: 1280px) {
+      .texting {
+        width: 35%;
+      }
+
+      .videos {
+        width: 55rem;
+      }
+    }
+
+    @media (min-width: 1380px) {
+      .texting {
+        width: 35%;
+      }
+
+      .videos {
+        width: 60rem;
+      }
+    }
+
+    */
+  </style>
+
+
+  <section class="d-flex justify-content-start video-index" style="min-height: 100vh; margin-bottom: 10rem;">
+    <div class="container-fluid texting " style="float: left;">
+      <div class=" text-center animatable fadeIn text-index">
+        <h6 class="text-bold text-grey letter-spacing-xs" style="padding-top: 35vh">
+          SELAMAT DATANG DI VZUU
+        </h6>
+        <h2 class="pink text-demibold">Semua Tentang <br />Anda</h2>
+        <a class="btn btn-brown text-light rounded-pill px-4 mt-3" href="#tentang-vzuu">TENTANG VZUU</a>
+      </div>
+      <div class=" d-flex shadow-lg rounded-5 videos"
+        style="max-height: 100vh; height: 150rem; position: absolute;  top: -50px; right: -30px; border-radius: 0.1rem; overflow: hidden; ">
+        <video id="backgroundVideo" style=" object-fit: cover;  border-radius:inherit; width: 100%; height: 100%;">
+          <source src="assets/video/video.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <img draggable="false" src="assets/img/mask-grey2.png" class="custom-image">
+
+  <section id="tentang-vzuu" class="section pt-5"
+    style="background: radial-gradient(circle at bottom right, #f1c3ce -2%,#fcf7f2, transparent 50%); padding-bottom: 100px;">
+    <div class=" container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 text-center text-lg-start">
+          <div style="position: relative; max-width: 100%; height: auto;">
+            <img src="./assets/img/founder.png" alt="Founder Image" class="img-fluid animatable bounceInLeft"
+              style="max-width: 100%; height: auto; position: relative; z-index: 1;" />
+
+            <img src="assets/img/ttd.png" alt="Signature Image" class="animatable fadeInUp signature" />
+          </div>
+        </div>
+        <div class="col-lg-7 animatable fadeInUp mt-4 ps-lg-5 ">
+          <h6 class="text-grey text-regular">CERITA DIBALIK VZUU</h6>
+          <h2 class="pink text-demibold">Halo, Kami adalah Vzuu</h2>
+          <p class="text-regular text-grey mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+            <br /><br />
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section text-white py-4 position-relative" id="section-slider" style="
+        background: linear-gradient(
+          #dbb8a1 32%,
+          #eedbcc 59%,
+          #e3cab9 78%,
+          #dbb8a1 93%
+        );
+      ">
+    <div class="position-absolute bottom-0 end-0 z-index-n1">
+      <img src="assets/img/mask-white-r.png" alt="Background Image" class="animatable fadeInUp img-fluid" />
+    </div>
+    <div class="container py-5">
+      <h6 class="text-center text-regular animatable fadeIn">VZUU GRUP</h6>
+      <h3 class="text-center text-demibold animatable fadeIn">
+        Temukan Solusi Untuk Permasalahan Kulitmu
+      </h3>
+
+      <div id="carouselExampleIndicators" class="carousel slide mt-5 animatable bounceInRight" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center ps-4">
+
+              <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card bg-transparent border-0 position-relative rounded-5" style="max-width: 25rem">
+                  <img src="./assets/img/clinic.png" class="card-img-top" alt="Beauty Image" />
+                  <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+                    <div class="card-text text-light px-4 pt-3 m-0 overlay-text d-flex justify-content-between">
+                      <div class="hover-div">
+                        <p class="fw-bold fs-5">VZUU Clinic</p>
+
+                      </div>
+                      <a href="clinic/clinic.html" class="text-light">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card bg-transparent border-0 position-relative rounded-5" style="max-width: 25rem">
+                  <img src="./assets/img/beauty.png" class="card-img-top" alt="Beauty Image" />
+                  <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+                    <div class="card-text text-light px-4 pt-3 m-0 overlay-text d-flex justify-content-between">
+                      <div class="hover-div">
+                        <p class="fw-bold fs-5">VZUU Beauty</p>
+                      </div>
+                      <a href="beauty/beauty.html" class="text-light">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="carousel-item">
+            <div class="row justify-content-center ps-5">
+
+              <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card bg-transparent border-0 position-relative rounded-5" style="max-width: 25rem">
+                  <img src="./assets/img/clinic.png" class="card-img-top" alt="Beauty Image" />
+                  <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+                    <div class="card-text text-light px-4 pt-3 m-0 overlay-text d-flex justify-content-between">
+                      <div>
+                        <p class="fw-bold fs-5">VZUU Clinic</p>
+                      </div>
+                      <a href="clinic/clinic.html" class="text-light">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card bg-transparent border-0 position-relative rounded-5" style="max-width: 25rem">
+                  <img src="./assets/img/beauty.png" class="card-img-top" alt="Beauty Image" />
+                  <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+                    <div class="card-text text-light px-4 pt-3 m-0 overlay-text d-flex justify-content-between">
+                      <div>
+                        <p class="fw-bold fs-5">VZUU Beauty</p>
+                      </div>
+                      <a href="beauty/beauty.html" class="text-light">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+        </div>
+
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <i class="bi bi-arrow-left" style="color: #545454; font-size: 24px"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <i class="bi bi-arrow-right" style="color: #545454; font-size: 24px"></i>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section animatable fadeIn fast py-5 top-gradient-background" data-aos-duration="500">
+    <div class="container">
+
+      <div class="text-center">
+        <h6 class="text-demibold text-grey mb-2 fs-16">BLOG VZUU</h6>
+        <h2 class="text-demibold pink mb-6 fs-31">Dapatkan Inspirasi dan Terhubung Dengan Kami</h2>
+      </div>
+
+      <div class="row mt-5 ">
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 h-100 bg-transparent">
+            <img src="./assets/img/blog1.png" class="card-img-top" alt="Blog post" />
+            <div class="card-body p-0 pt-2">
+              <h6 class="pink text-demibold">KULIT</h6>
+              <h4 class="card-title text-demibold text-grey">
+                5 Tips Kecantikan Menjelang Hari Pernikahan
+              </h4>
+              <p class="card-text text-regular">
+                Menjelang hari pernikahan, memang semakin banyak persiapan
+                yang harus dilakukan.
+              </p>
+              <a href="blog_detail.html" class="text-brown text-regular">BACA LEBIH LANJUT</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 h-100 bg-transparent">
+            <img src="./assets/img/blog2.png" class="card-img-top" alt="Blog post" />
+            <div class="card-body p-0 pt-2">
+              <h6 class="pink text-demibold">KULIT</h6>
+              <h4 class="card-title text-demibold text-grey">
+                Alasan Mengapa Tidak Boleh Memencet Jerawat
+              </h4>
+              <p class="card-text text-regular">
+                Memencet jerawat bisa menyebabkan lebih banyak masalah kulit.
+              </p>
+              <a href="#" class="text-brown text-regular">BACA LEBIH LANJUT</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 h-100 bg-transparent">
+            <img src="./assets/img/blog3.png" class="card-img-top" alt="Blog post" />
+            <div class="card-body p-0 pt-2">
+              <h6 class="pink text-demibold">KULIT</h6>
+              <h4 class="card-title text-demibold text-grey">
+                Perawatan Wajah Jika Kurang Tidur di Malam Hari
+              </h4>
+              <p class="card-text text-regular">
+                Kurang tidur bisa menyebabkan kulit tampak kusam.
+              </p>
+              <a href="#" class="text-brown text-regular">BACA LEBIH LANJUT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-brown rounded-5 mt-5" href="blog.html">LIHAT SEMUA BLOG</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-4 animatable fadeInUp my-5 fotogrup">
+    <img src="./assets/img/group.png" class="card-img-top img-fluid rounded-5" style="padding: 50px;" alt="fotogroup">
+  </section>
+
+  <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+    <img src="assets/img/whatsapp.png">
+  </a>
+
+  <div class="position-relative" style="z-index: -1; bottom: -32rem;">
+    <img draggable="false" src="assets/img/mask-grey-r.png" alt="Background Image"
+      class=" img-fluid background-img position-absolute bottom-0 end-0" />
+  </div>
+
+  <footer class="footer">
+    <div class="row justify-content-center position-relative px-5 animatable bounceInLeft" style="margin-top: -6rem">
+      <div id="newsletter" class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+        <div class="newsletter-box p-4" style="background-color: #CEC1B9;width: 100%;">
+          <h5 class="text-brown text-demibold mb-3 lh-base ">
+            Daftar <br> Newsletter Kami
+          </h5>
+          <div class="input-group">
+            <input type="email" class="form-control rounded-pill me-2 text-grey" placeholder="Masukkan email Anda" />
+            <button class="btn btn-secondary rounded-pill" style="background-color: #7A6D65;" type="button">
+              BERLANGGANAN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container animatable fadeInUp">
+      <div class="row" style="margin-top: 15rem">
+        <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+          <img src="./assets/img/vzuu.png" class="mb-4" />
+          <p class="text-medium text-grey">
+            Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+            estetika yang inovatif dan profesional.
+          </p>
+
+          <div class="d-flex flex-column flex-md-row gap-3 mt-6 pink">
+            <div style="margin-right: 20px;">
+              <div>
+                <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                    class="bi bi-instagram pink"></i></a>
+                <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                    class="bi bi-tiktok pink"></i></a>
+                <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                    class="bi bi-youtube pink"></i></a>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                    class="bi bi-instagram pink"></i></a>
+                <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc" target="_blank"
+                  class="me-3"><i class="bi bi-tiktok pink"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem;">
+          <h5 class="text-dark text-uppercase text-demibold mb-3">Navigasi</h5>
+          <div class="row lh-lg text-medium text-grey mt-3">
+            <div class="col-6 col-md-4">
+              <ul class="list-unstyled">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="clinic\clinic.html">Vzuu Clinic</a></li>
+                <li><a href="beauty\beauty.html">Vzuu Beauty</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <ul class="list-unstyled">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="beauty\signin.html">Akun</a></li>
+                <li><a href="hubungi-kami.html">Hubungi Kami</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mt-3 mt-md-0">
+              <ul class="list-unstyled">
+                <li><a href="beauty/account.html?#konfirmasi">Konfirmasi Pembayaran</a></li>
+                <li><a href="terms-condition.html">Syarat & Ketentuan</a></li>
+                <li><a href="privacy.html">Kebijakan Privasi</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+      <p class="text-white m-0 text-regular">
+        2024. Vzuu. All Right Reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./assets/global.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+    var video = $('#backgroundVideo').get(0);
+    video.autoplay = true;
+    video.muted = true; // Ensure the video is muted (common requirement for autoplay)
+    video.controls = false; // Hide video controls
+    video.loop = true;
+    video.play(); // Start playing the video
+  });
+
+  $('.overlay-text').each(function () {
+    $(this).on({
+      mouseenter: function () {
+        let $p = $(this).find('p');
+        if (!$(this).find('.hover-span').length) {
+          let $span = $('<span >', {
+            html: 'VZUU clinic hadir dengan kesadaran akan kebutuhan untuk memberikan perawatan estetika yang inovatif dan profesional.',
+            class: 'hover-span',
+          })
+          $span.attr('style', 'padding-bottom: 10px');
+          $p.after($span);
+
+          let $prevDiv = $(this).find('div.hover-div').first();
+          $prevDiv.css('padding-bottom', '20px');
+        }
+      },
+      mouseleave: function () {
+        $(this).find('.hover-span').remove();
+        $(this).find('div.hover-div').css('padding-bottom', '');
+      }
+    });
+  });
+</script>
+
+</html>

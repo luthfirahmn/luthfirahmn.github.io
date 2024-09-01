@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VZUU</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- global style -->
+    <link href="../assets/global.css" rel="stylesheet">
+
+    <!-- this page css -->
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/mobile/clinic/faq.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .accordion {
+            background-color: transparent;
+            --bs-accordion-border-color: none;
+        }
+
+        .accordion-item {
+            background-color: transparent;
+            border: none;
+        }
+
+        .accordion-body {
+            background-color: transparent;
+        }
+
+        .accordion-button {
+            background-color: transparent;
+            border: none;
+            box-shadow: none !important;
+            color: #545454;
+            font-weight: 600;
+            border-bottom: 0.3px solid grey !important;
+        }
+
+        .accordion-button:focus,
+        .accordion-button:not(.collapsed) {
+            background-color: transparent;
+            color: #545454;
+            font-weight: 600;
+        }
+
+        .accordion-button:not(.collapsed) {
+            border-bottom: none !important;
+        }
+
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23grey'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23grey'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: rotate(-180deg);
+        }
+
+        /* Override any Bootstrap default styles */
+        .accordion-button,
+        .accordion-button:hover,
+        .accordion-button:focus {
+            border-color: grey !important;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-blend-light {
+            filter: brightness(50%);
+        }
+    </style>
+</head>
+
+<body class="body-gradient">
+
+    <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+        <img src="../assets/img/whatsapp.png">
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Navbar Toggler for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/logo-klinik.png" alt="Vzuu Clinic Logo" class="img-fluid"
+                    style="max-width: 150px;">
+            </a>
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-label="Close"></button>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Tentang Vzuu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="clinic.html">Tentang Vzuu Clinic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perawatan.html">Perawatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faq_clinic.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../beauty/beauty.html">Vzuu Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="true">
+                        <img src="../assets/img/ind.png" alt="IDN" width="25" height="18" />
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="../assets/img/ind.png" alt="IDN" width="20" height="15" />
+                                <span class="language-text">ID</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="../assets/img/eng.png" alt="EN" width="20" height="18" />
+                                <span class="language-text">EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="text-center" style="padding-top: 50px;">
+
+            <h6 class="mb-2 text-grey text-demibold subhead">TIM KAMI PEDULI DENGAN ANDA</h6>
+            <h3 class="mb-4 pink text-demibold head">Pertanyaan Yang Sering Diajukan</h3>
+        </div>
+        <img draggable="false" src="../assets/img/mask-grey2.png"
+            style="position: absolute; bottom: -170px; right: -120px; width: 35%; object-fit: cover; height: 80%;z-index: -1;">
+    </div>
+
+    <section class="faq-section container ">
+        <div class="accordion animatable fadeInUp" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="question">Apakah konsultasi diperlukan sebelum menjalani prosedur di klinik
+                            kecantikan?</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion" style="margin-top: -20px;">
+                    <div class="accordion-body text-regular text-grey">
+                        <span class="answer"> Ya, konsultasi dengan dokter atau profesional medis klinik kecantikan
+                            sangat penting untuk
+                            menentukan pilihan terbaik sesuai kebutuhan dan kondisi kulit atau tubuh Anda. </span>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span class="question">Apakah konsultasi diperlukan sebelum menjalani prosedur di klinik
+                            kecantikan?</span>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion" style="margin-top: -20px;">
+                    <div class="accordion-body text-regular text-grey">
+                        <span class="answer"> Ya, konsultasi dengan dokter atau profesional medis klinik kecantikan
+                            sangat penting untuk
+
+                            menentukan pilihan terbaik sesuai kebutuhan dan kondisi kulit atau tubuh Anda. </span>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span class="question"> Apakah konsultasi diperlukan sebelum menjalani prosedur di klinik
+                            kecantikan? </span>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion" style="margin-top: -20px;">
+                    <div class="accordion-body text-regular text-grey">
+                        <span class="answer"> Ya, konsultasi dengan dokter atau profesional medis klinik kecantikan
+                            sangat penting untuk
+                            menentukan pilihan terbaik sesuai kebutuhan dan kondisi kulit atau tubuh Anda. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="row justify-content-center position-relative px-5 animatable bounceInLeft"
+            style="margin-top: -6rem">
+            <div id="newsletter"
+                class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+                <div class="newsletter-box p-4" style="background-color: #CEC1B9;width: 100%;">
+                    <h5 class="text-brown text-demibold mb-3 lh-base ">
+                        Daftar <br> Newsletter Kami
+                    </h5>
+                    <div class="input-group">
+                        <input type="email" class="form-control rounded-pill me-2 text-grey"
+                            placeholder="Masukkan email Anda" />
+                        <button class="btn btn-secondary rounded-pill" style="background-color: #7A6D65;" type="button">
+                            BERLANGGANAN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container animatable fadeInUp">
+            <div class="row" style="margin-top: 15rem">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="../assets/img/vzuu.png" class="mb-4" />
+                    <p class="text-medium text-grey">
+                        Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+                        estetika yang inovatif dan profesional.
+                    </p>
+
+                    <div class="d-flex flex-column flex-md-row gap-3 mt-6 pink">
+                        <div style="margin-right: 20px;">
+                            <div>
+                                <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                                        class="bi bi-instagram pink"></i></a>
+                                <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                                        class="bi bi-tiktok pink"></i></a>
+                                <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                                <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                                        class="bi bi-youtube pink"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                                        class="bi bi-instagram pink"></i></a>
+                                <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc"
+                                    target="_blank" class="me-3"><i class="bi bi-tiktok pink"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem;">
+                    <h5 class="text-dark text-uppercase text-demibold mb-3">Navigasi</h5>
+                    <div class="row lh-lg text-medium text-grey mt-3">
+                        <div class="col-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li><a href="../index.html">Beranda</a></li>
+                                <li><a href="../clinic\clinic.html">Vzuu Clinic</a></li>
+                                <li><a href="../beauty\beauty.html">Vzuu Beauty</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li><a href="../blog.html">Blog</a></li>
+                                <li><a href="../beauty\signin.html">Akun</a></li>
+                                <li><a href="../hubungi-kami.html">Hubungi Kami</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0">
+                            <ul class="list-unstyled">
+                                <li><a href="../beauty/account.html?#konfirmasi">Konfirmasi Pembayaran</a></li>
+                                <li><a href="../terms-condition.html">Syarat & Ketentuan</a></li>
+                                <li><a href="../privacy.html">Kebijakan Privasi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+            <p class="text-white m-0 text-regular">
+                2024. Vzuu. All Right Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../assets/global.js"></script>
+
+</html>

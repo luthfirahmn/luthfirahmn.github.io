@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VZUU</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <!-- global style -->
+  <link href="../assets/global.css" rel="stylesheet" />
+
+  <!-- this page css -->
+  <link href="../assets/css/index.css" rel="stylesheet" />
+  <link href="../assets/css/mobile/clinic/perawatan_detail.css" rel="stylesheet">
+
+  <style>
+    .custom-images {
+      position: absolute;
+      left: -20px;
+      top: 2rem;
+      width: 35%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="body-gradient">
+  <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+    <img src="../assets/img/whatsapp.png" />
+  </a>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="../assets/img/logo-klinik.png" alt="Vzuu Clinic Logo" class="img-fluid" style="max-width: 150px" />
+      </a>
+      <!-- Navbar Menu -->
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-label="Close"></button>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Tentang Vzuu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="clinic.html">Tentang Vzuu Clinic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="perawatan.html">Perawatan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq_clinic.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../beauty/beauty.html">Vzuu Beauty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="dropdown">
+          <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+            <img src="../assets/img/ind.png" alt="IDN" width="25" height="18" />
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="../assets/img/ind.png" alt="IDN" width="20" height="15" />
+                <span class="language-text">ID</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="../assets/img/eng.png" alt="EN" width="20" height="18" />
+                <span class="language-text">EN</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <img draggable="false" src="../assets/img/mask-grey.png" class="custom-images" />
+
+  <section class="container my-5">
+    <div class="text-center pt-5">
+      <h6 class="mb-2 text-grey text-demibold subhead">WAJAH</h6>
+      <h3 class="mb-4 pink text-demibold head">Super Facial Oxygeneo 5 in 1</h3>
+      <span style="
+        background-color: #a9576a;
+        color: #fff;
+        border-radius: 50px;
+        padding: 12px 20px 12px 20px;
+        font-size: 12px;
+      ">
+        <i class="fas fa-clock" style="color: #fff; margin-right: 5px"></i>
+        PERAWATAN 2 JAM
+      </span>
+    </div>
+  </section>
+
+  <div class="container ">
+    <div class="carousel slide animatable fadeInUp" id="carousel1" data-bs-ride="carousel" data-min-per-slide="3">
+      <div class="carousel-inner    w-100">
+        <div class="carousel-item active">
+          <div class="col-lg-4 col-12">
+            <img class="img-fluid images1 object-fit-fill" src="../assets/img/facial3.png">
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="col-lg-4 col-12">
+            <img class="img-fluid images1 object-fit-fill" src="../assets/img/facial2.png">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-lg-4 col-12">
+            <img class="img-fluid images1 object-fit-fill" src="../assets/img/facial1.png">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center float-lg-end arrow-carousel-1 py-2 py-lg-0">
+        <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+          <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="bg-transparent border-0" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+          <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row my-4 animatable fadeInUp">
+      <div class="col desc" style="text-align: center">
+        <p class="text-regular">
+          Super Facial ini menggunakan mesin Eropa yang mencerahkan kulit,
+          menetralkan pH wajah yang berlebihan, mengangkat sel kulit mati, dan
+          merangsang produksi kolagen.
+        </p>
+        <h6>Langkah-langkah dalam Facial Oxygeno 5 in 1:</h6>
+        <ol class="text-regular desc-left" style="display: inline-block; text-align: center; line-height: 40px">
+          1. Detoks Wajah - Membersihkan kotoran secara menyeluruh dari
+          lapisan kulit terdalam dan epidermis.
+          <br />
+          2. Radio Frekuensi (RF) - Mengurangi kerutan-kerutan halus dan
+          mengencangkan kulit wajah yang kendur.
+          <br />
+          3. Microdermabrasi - Mengangkat sel-sel kulit mati.
+          <br />
+          4. Ultrasonik - Menginfus serum ke dalam lapisan kulit terdalam.
+          <br />
+          5. Terapi Pijat Lampu LED - Merileksasi kulit wajah.
+          <br />
+        </ol>
+      </div>
+    </div>
+
+    <div class="  my-5">
+      <div class="carousel slide  " data-min-per-slide="5" id="carousel3" data-bs-ride="carousel">
+        <div class="carousel-inner    w-100 ">
+          <div class="carousel-item active">
+            <div class="col-md-3">
+              <div class="">
+                <img class="img-fluid object-fit-fill" src="../assets/img/award1.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-3">
+              <div class=" ">
+                <img class="img-fluid images2 object-fit-fill" src="../assets/img/award2.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-3">
+              <div class=" ">
+                <img class="img-fluid  images2 object-fit-fill" src="../assets/img/award3.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-3">
+              <div class=" ">
+                <img class="img-fluid images2 object-fit-fill" src="../assets/img/award4.png">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-3">
+              <div class=" ">
+                <img class="img-fluid images2 object-fit-fill" src="../assets/img/award5.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center arrow-carousel-1 py-2 py-lg-0">
+          <button class="bg-transparent border-0" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+            <i class="bi bi-arrow-left" style="color: #545454; font-size: 20px"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="bg-transparent border-0" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+            <i class="bi bi-arrow-right" style="color: #545454; font-size: 20px"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-5 text-center">
+      <div class="col">
+        <a href="https://www.whatsapp.com/" target="_blank" class="btn my-3 px-4"
+          style="border-radius: 25px; background-color: #a9576a; color: white">
+          RESERVASI
+        </a>
+      </div>
+    </div>
+
+    <style>
+      .article-nav {
+        color: #545454;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .article-nav:hover {
+        color: #a9576a;
+        text-decoration: none;
+      }
+    </style>
+    <div class="separator my-4" style="width: 80%; margin: 0 auto">
+      <hr style="border-top: 1px solid #ccc" />
+      <div class="d-flex justify-content-between align-items-center px-3">
+        <a class="d-flex align-items-center text-demibold article-nav" href="perawatan.html" style="text-align: left;">
+          <i class="fa-solid fa-arrow-left me-3"></i>
+          <span>Special Vzuu Package</span>
+        </a>
+        <a class="d-flex align-items-center text-demibold article-nav" href="perawatan_detail.html"
+          style="text-align: right;">
+          <span>Voluderm by Pollogen</span><i class="fa-solid fa-arrow-right ms-3"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="position-relative" style="z-index: -1; bottom: -32rem">
+    <img draggable="false" src="../assets/img/mask-grey-r.png" alt="Background Image"
+      class="img-fluid background-img position-absolute bottom-0 end-0" />
+  </div>
+
+  <footer class="footer">
+    <div class="row justify-content-center position-relative px-5 animatable bounceInLeft" style="margin-top: -6rem">
+      <div id="newsletter" class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+        <div class="newsletter-box p-4" style="background-color: #cec1b9; width: 100%">
+          <h5 class="text-brown text-demibold mb-3 lh-base">
+            Daftar <br />
+            Newsletter Kami
+          </h5>
+          <div class="input-group">
+            <input type="email" class="form-control rounded-pill me-2 text-grey" placeholder="Masukkan email Anda" />
+            <button class="btn btn-secondary rounded-pill" style="background-color: #7a6d65" type="button">
+              BERLANGGANAN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container animatable fadeInUp">
+      <div class="row" style="margin-top: 15rem">
+        <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+          <img src="../assets/img/vzuu.png" class="mb-4" />
+          <p class="text-medium text-grey">
+            Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+            estetika yang inovatif dan profesional.
+          </p>
+
+          <div class="d-flex flex-column flex-md-row gap-3 mt-6 pink">
+            <div style="margin-right: 20px;">
+              <div>
+                <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                    class="bi bi-instagram pink"></i></a>
+                <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                    class="bi bi-tiktok pink"></i></a>
+                <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                    class="bi bi-youtube pink"></i></a>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                    class="bi bi-instagram pink"></i></a>
+                <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc" target="_blank"
+                  class="me-3"><i class="bi bi-tiktok pink"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem">
+          <h5 class="text-dark text-uppercase text-demibold mb-3">
+            Navigasi
+          </h5>
+          <div class="row lh-lg text-medium text-grey mt-3">
+            <div class="col-6 col-md-4">
+              <ul class="list-unstyled">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../clinic\clinic.html">Vzuu Clinic</a></li>
+                <li><a href="../beauty\beauty.html">Vzuu Beauty</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <ul class="list-unstyled">
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../beauty\signin.html">Akun</a></li>
+                <li><a href="../hubungi-kami.html">Hubungi Kami</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mt-3 mt-md-0">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../beauty/account.html?#konfirmasi">Konfirmasi Pembayaran</a>
+                </li>
+                <li>
+                  <a href="../terms-condition.html">Syarat & Ketentuan</a>
+                </li>
+                <li><a href="../privacy.html">Kebijakan Privasi</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+      <p class="text-white m-0 text-regular">
+        2024. Vzuu. All Right Reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../assets/global.js"></script>
+
+</html>

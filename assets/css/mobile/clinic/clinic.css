@@ -1,0 +1,96 @@
+@media only screen and (max-width: 768px) {
+    .head {
+        font-size: 30px;
+    }
+
+    .desc {
+        text-align: justify !important;
+        padding: 0 !important;
+    }
+
+    .clinic-info {
+        padding: 10px !important;
+        text-align: left !important;
+    }
+
+    .reserv-button {
+        margin-top: 20px !important;
+    }
+
+    .videos-page {
+        height: 350px !important;
+    }
+
+    .doctors-desc {
+        text-align: justify !important;
+    }
+
+    .doctor {
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+
+.carousel-inner .carousel-item {
+    justify-content: center;
+    align-items: center;
+}
+
+.images1 {
+    height: 350px;
+    width: 350px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:nth-child(-n+3) {
+        display: block;
+    }
+
+    .images1 {
+        height: 280px;
+        width: 350px;
+    }
+
+    .carousel-images {
+        height: 150px;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+
+    /* .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(25%) !important;
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-item-prev:not(.carousel-item-end),
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+
+    .carousel-item-next.carousel-item-start,
+    .active.carousel-item-end {
+        transform: translateX(0) !important;
+    }
+
+    .carousel-inner .carousel-item-prev,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    } */
+}

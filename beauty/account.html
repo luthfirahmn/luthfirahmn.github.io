@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VZUU</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- global style -->
+  <link href="../assets/global.css" rel="stylesheet" />
+
+  <!-- this page css -->
+  <link href="../assets/css/index.css" rel="stylesheet" />
+  <link href="../assets/css/cart.css" rel="stylesheet" />
+  <link href="../assets/css/mobile/beauty/account.css" rel="stylesheet" />
+
+  <style>
+    .sidebar {
+      background-color: transparent;
+      padding: 20px;
+
+    }
+
+    .sidebar a {
+      display: block;
+      color: #5c5c5c;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    .sidebar a.active {
+      text-decoration: underline;
+      text-decoration-color: #F2ABBB;
+    }
+
+    .content-wrapper {
+      padding: 40px;
+    }
+
+    .section-title {
+      color: #A96A7C;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      border-radius: 30px;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+    }
+
+    .form-label {
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #7A6D65;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 30px;
+    }
+  </style>
+
+</head>
+
+<body class="body-gradient">
+
+  <a href="https://www.whatsapp.com/" target="_blank" class="whatsapp-icon">
+    <img src="../assets/img/whatsapp.png">
+  </a>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top text-demibold px-lg-5">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="../assets/img/logo-beauty.png" alt="Vzuu Clinic Logo" class="img-fluid" style="max-width: 150px;">
+      </a>
+      <!-- Navbar Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button type="button" class="btn-close btn-close-white close-btn d-md-none" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-label="Close"></button>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Tentang Vzuu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="../clinic/clinic.html">Vzuu Clinic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="beauty.html">Vzuu Beauty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center ms-3">
+        <a href="javascript:void(0)"" class=" me-3" onclick="toggleSearch()">
+          <img src="../assets/img/search.svg" alt="Search" style="width: 20px; height: 20px;">
+        </a>
+        <a href="signin.html" class="me-3">
+          <img src="../assets/img/profile-circle.svg" alt="Search" style="width: 20px; height: 20px;">
+        </a>
+
+        <a href="javascript:void(0)" class="me-3 position-relative" id="cart-link">
+          <img src="../assets/img/bag-2.svg" id="cart-nav" alt="Search" style="width: 20px; height: 20px;"
+            onclick="openCart()">
+          <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
+            style="font-size: 10px;">0</span>
+        </a>
+        <div class="dropdown">
+          <button class="btn btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+            <img src="../assets/img/ind.png" alt="IDN" width="25" height="18">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="../assets/img/ind.png" alt="IDN" width="20" height="15">
+                ID
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="../assets/img/eng.png" alt="EN" width="20" height="15">
+                EN
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="searchBox" class="search-box d-flex">
+      <div class="search-container">
+        <i class=" search-icon"></i>
+        <input type="text" placeholder="Search...">
+        <a href="javascript:void(0)" class="search-submit"><i class="fa fa-arrow-right"></i></a>
+
+      </div>
+      <a href="javascript:void(0)" class="search-close" onclick="toggleSearch()"><i class="fa fa-times"></i></a>
+    </div>
+  </nav>
+
+  <div style="margin-top: 8rem;">
+
+    <div class="container ">
+      <div class="text-center " style="margin-bottom: 50px;">
+        <h6 class=" text-regular text-grey">DETAIL AKUN</h6>
+        <h3 class="pink text-demibold">
+          Mengelola Akun Anda
+        </h3>
+      </div>
+
+      <div class="row">
+        <!-- Sidebar -->
+        <!-- <div class="col-md-3 d-none d-md-block"> -->
+        <div class="col-md-3 ">
+          <div class="sidebar">
+            <a class="text-demibold" href="#first">Informasi Pribadi</a>
+            <a class="text-demibold" href="#alamat">Alamat</a>
+            <a class="text-demibold" href="#pesanan-saya">Pesanan Saya</a>
+            <a class="text-demibold" href="#konfirmasi">Konfirmasi Pembayaran</a>
+            <a class="text-demibold" href="./signin.html">Keluar</a>
+          </div>
+        </div>
+
+
+
+        <!-- Content Wrapper -->
+        <div class="col-md-9">
+          <form>
+
+
+            <!-- Formulir Informasi Pribadi -->
+            <div id="firstForms">
+              <div class="row ">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="text-grey text-medium required">Nama Depan</label>
+                  <input type="text" class="form-control" id="firstName" value="Andrea">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="text-grey text-medium required">Nama Belakang</label>
+                  <input type="text" class="form-control" id="lastName" value="Harley">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="gender" class="text-grey text-medium required">Jenis Kelamin</label>
+                  <input type="text" class="form-control" id="gender" value="Female">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="dob" class="text-grey text-medium required">Tanggal Lahir</label>
+                  <input type="date" class="form-control" id="dob" value="12/10/1990">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="phone" class="text-grey text-medium required">Nomor Hp</label>
+                  <input type="text" class="form-control" id="phone" value="08123232435">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="email" class="text-grey text-medium required">Email</label>
+                  <input type="text" class="form-control" id="email" value="andreaharley@gmail.com">
+                </div>
+              </div>
+
+              <style>
+                .password-input-container {
+                  position: relative;
+                  display: flex;
+                  align-items: center;
+                }
+
+                .form-control {
+                  width: 100%;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 20px;
+                  font-size: 16px;
+                }
+
+                .toggle-password {
+                  position: absolute;
+                  right: 10px;
+                  cursor: pointer;
+                }
+
+                .toggle-password svg {
+                  color: #888;
+                }
+
+                .text-grey {
+                  color: #666;
+                }
+
+                .text-medium {
+                  font-weight: 500;
+                }
+
+                .required::after {
+                  content: " *";
+                  color: red;
+                }
+
+                .password-input-container .toggle-password {
+                  padding-right: 10px;
+                }
+
+                .custom-button-brown-outline {
+                  background-color: #ffffff;
+                }
+              </style>
+              <h2 class="text20 text-grey text-demibold pt-5 mb-3">Ganti Kata Sandi</h2>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="currentPassword" class="text-grey text-medium required">Kata Sandi Saat Ini *</label>
+                  <div class="password-input-container">
+                    <input type="text" class="form-control" id="currentPassword">
+                    <span class="toggle-password">
+                      <img src="../assets/img/eye1.png" alt="Toggle Password Visibility">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="newPassword" class="text-grey text-medium required">Kata Sandi Baru</label>
+                  <div class="password-input-container">
+                    <input type="text" class="form-control" id="newPassword">
+                    <span class="toggle-password">
+                      <img src="../assets/img/eye2.png" alt="Toggle Password Visibility">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="confirmPassword" class="text-grey text-medium required">Konfirmasi Kata Sandi Baru</label>
+                  <div class="password-input-container">
+                    <input type="text" class="form-control" id="konfirmPassword">
+                    <span class="toggle-password">
+                      <img src="../assets/img/eye2.png" alt="Toggle Password Visibility">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulir Alamat -->
+            <div id="addressForm" style="display: none;">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="text-grey text-medium required">Nama Depan</label>
+                  <input type="text" class="form-control" id="firstName" value="Andrea">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="text-grey text-medium required">Nama Belakang</label>
+                  <input type="text" class="form-control" id="lastName" value="Harley">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="street" class="text-grey text-medium required">Alamat</label>
+                  <input type="text" class="form-control" id="street">
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="city" class="text-grey text-medium required">Kota</label>
+                  <input type="text" class="form-control" id="city">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="state" class="text-grey text-medium required">Provinsi</label>
+                  <input type="text" class="form-control" id="state">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="country" class="text-grey text-medium required">Negara</label>
+                  <input type="text" class="form-control" id="country">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="zip" class="text-grey text-medium required">Kode Pos</label>
+                  <input type="text" class="form-control" id="zip">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="zip" class="text-grey text-medium required">No Hp</label>
+                  <input type="text" class="form-control" id="zip">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="zip" class="text-grey text-medium required">Email</label>
+                  <input type="text" class="form-control" id="zip" value="andreaharley@gmail.com">
+                </div>
+              </div>
+            </div>
+
+            <!-- Daftar Pesanan -->
+            <div id="orderList" style="display: none;">
+              <style>
+                #table-cs {
+                  border-collapse: collapse;
+                  width: 100%;
+                  color: #545454;
+                  font-weight: normal;
+                }
+
+                #table-cs td,
+                #table-cs th {
+                  border-bottom: 1px solid #ddd;
+                  padding: 8px;
+                }
+
+                #table-cs th {
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+                  text-align: left;
+                  background-color: transparent;
+                  color: #545454;
+                  font-weight: 500;
+                }
+              </style>
+
+              <div class="">
+                <table id="table-cs">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pesanan</th>
+                      <th scope="col">Tanggal</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#239285</td>
+                      <td>21 April, 2024</td>
+                      <td>Selesai</td>
+                      <td>Rp 1.000.000 for 2 items</td>
+                      <td><button class="custom-button-brown-outline lihat-pesanan">LIHAT</button></td>
+                    </tr>
+                    <tr>
+                      <td>#239286</td>
+                      <td>21 April, 2024</td>
+                      <td>Selesai</td>
+                      <td>Rp 1.000.000 for 2 items</td>
+                      <td><button class="custom-button-brown-outline lihat-pesanan">LIHAT</button></td>
+                    </tr>
+                    <tr>
+                      <td>#239287</td>
+                      <td>21 April, 2024</td>
+                      <td>Selesai</td>
+                      <td>Rp 1.000.000 for 2 items</td>
+                      <td><button class="custom-button-brown-outline lihat-pesanan">LIHAT</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+            <!-- Detail Pesanan -->
+            <div id="orderDetails" style="display: none;">
+              <p class="text-medium text-grey text16">Pesanan #239285 ditempatkan pada 27 April 2024 dan telah selesai.
+              </p>
+              <h2 class="text-demibold text-grey text20">Detail Pesanan</h2>
+              <table id="table-cs">
+                <thead>
+                  <tr>
+                    <th class="text-medium text18 text-grey">Produk</th>
+                    <th class="text-medium text18 text-grey">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-medium text16 text-grey">
+                    <td>Cleansing Pads x 1
+                      <p class="ps-4 text14">Size: 250 gr</p>
+                    </td>
+                    <td>Rp 429.000</td>
+                  </tr>
+                  <tr class="text-medium text16 text-grey">
+                    <td>Hydrating Moisturizer x 1
+                      <p class="ps-4 text14">Size: 80 gr</p>
+                    </td>
+                    <td>Rp 429.000</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr class="text-medium text-grey">
+                    <td class=" py-3">Subtotal</td>
+                    <td>Rp 858.000</td>
+                  </tr>
+                  <tr class="text-medium text-grey">
+                    <td class=" py-3">Pengiriman</td>
+                    <td>Free shipping</td>
+                  </tr>
+                  <tr class="text-medium text-grey">
+                    <td class=" py-3">Metode Pembayaran</td>
+                    <td>Midtrans</td>
+                  </tr>
+                  <tr class="text-medium text-grey">
+                    <td class=" py-3">Total</td>
+                    <td>Rp 858.000</td>
+                  </tr>
+                </tfoot>
+              </table>
+
+
+              <div class="mt-5">
+
+                <h3 class="text-demibold text20 text-grey" style="margin-bottom: 20px;">Alamat Tagihan</h3>
+                <p class="text-medium text16 text-grey " style="margin-bottom: 20px;">Andrea Harley<br>Jalan Jakarta No
+                  21<br>Kec. Kelapa
+                  Gading<br>Kota Jakarta Utara<br>DKI
+                  Jakarta<br>34232<br></p>
+
+                <h6 class="text-medium text16" style="margin-bottom: 20px;"><img src="../assets/img/call-calling.png"
+                    alt="Phone Icon" class="me-2">
+                  081232932053</h6>
+                <h6 class="text-medium text16"><img src="../assets/img/sms-tracking.svg" alt="Phone Icon"
+                    class="me-2">andreaharley@gmail.com</h6>
+                <!-- <button type="button" class="custom-button-brown mt-3" onclick="hideOrderDetails()">Kembali</button> -->
+              </div>
+            </div>
+
+            <!-- Konfirmasi Pembayaran -->
+            <div id="konfirmasiPesanan" style="display: none;">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="orderNumber" class="text-grey text-medium required">Nomor Pesanan</label>
+                  <input type="text" class="form-control" id="orderNumber" value="123456">
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="paymentEmail" class="text-grey text-medium required">Email</label>
+                  <input type="email" class="form-control" id="paymentEmail" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="paymentTotal" class="text-grey text-medium required">Total Pembayaran</label>
+                  <input type="text" class="form-control" id="paymentTotal" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="paymentDate" class="text-grey text-medium required">Tanggal Pembayaran</label>
+                  <input type="text" class="form-control" id="paymentDate" value="12/10/1990">
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Tombol Simpan dan Batal -->
+            <div class="button-container">
+              <button type="submit" class="custom-button-brown mt-3 " id="simpan">SIMPAN PERUBAHAN</button>
+              <button type="submit" class="custom-button-brown mt-3" id="alamat">PERBARUI ALAMAT</button>
+              <button type="button" class="custom-button-brown-outline mt-3" id="batal">BATAL</button>
+              <button type="button" class="custom-button-brown mt-3" id="konfirmasi-bayar"
+                style="display: none;">KONFIRMASI
+                PEMBAYARAN</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-relative" style="z-index: -1; bottom: -35rem;">
+      <img draggable="false" src="../assets/img/mask-grey-r.png" alt="Background Image"
+        class=" img-fluid background-img position-absolute bottom-0 end-0" />
+    </div>
+
+    <footer class="footer">
+      <div class="row justify-content-center position-relative px-5 animatable bounceInLeft" style="margin-top: -6rem">
+        <div id="newsletter" class="col-md-8 col-lg-7 mb-4 mb-md-0 position-absolute top-0 start-50 translate-middle-x">
+          <div class="newsletter-box p-4" style="background-color: #CEC1B9;width: 100%;">
+            <h5 class="text-brown text-demibold mb-3 lh-base ">
+              Daftar <br> Newsletter Kami
+            </h5>
+            <div class="input-group">
+              <input type="email" class="form-control rounded-pill me-2 text-grey" placeholder="Masukkan email Anda" />
+              <button class="btn btn-secondary rounded-pill" style="background-color: #7A6D65;" type="button">
+                BERLANGGANAN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container animatable fadeIn">
+        <div class="row" style="margin-top: 15rem">
+          <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+            <img src="../assets/img/vzuu.png" class="mb-4" />
+            <p class="text-medium text-grey">
+              Vzuu hadir dengan menyadari kebutuhan untuk memberikan perawatan
+              estetika yang inovatif dan profesional.
+            </p>
+
+            <div class="d-flex flex-column flex-md-row gap-3 mt-6 pink">
+              <div style="margin-right: 20px;">
+                <div>
+                  <p class="text-demibold" style="color: #F2ABBB;">@vzuuclinic</p>
+                </div>
+                <div class="mt-2">
+                  <a href="https://www.instagram.com/vzuuclinic/" target="_blank" class="me-3"><i
+                      class="bi bi-instagram pink"></i></a>
+                  <a href=" https://www.tiktok.com/@vzuuclinic" target="_blank" class="me-3"><i
+                      class="bi bi-tiktok pink"></i></a>
+                  <!-- <a href="#" class="me-3"><i class="bi bi-facebook pink"></i></a> -->
+                  <a href="https://www.youtube.com/@vzuuclinicdermatologyaesth1021" target="_blank"><i
+                      class="bi bi-youtube pink"></i></a>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p class="text-demibold" style="color: #F2ABBB;">@vzuubeauty</p>
+                </div>
+                <div class="mt-2">
+                  <a href="https://www.instagram.com/vzuubeauty/" target="_blank" class="me-3"><i
+                      class="bi bi-instagram pink"></i></a>
+                  <a href="https://www.tiktok.com/@vzuubeauty?is_from_webapp=1&sender_device=pc" target="_blank"
+                    class="me-3"><i class="bi bi-tiktok pink"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 text-center text-md-start text-grey" style="padding-left: 5rem;">
+            <h5 class="text-dark text-uppercase text-demibold mb-3">Navigasi</h5>
+            <div class="row lh-lg text-medium text-grey mt-3">
+              <div class="col-6 col-md-4">
+                <ul class="list-unstyled">
+                  <li><a href="../index.html">Beranda</a></li>
+                  <li><a href="../clinic\clinic.html">Vzuu Clinic</a></li>
+                  <li><a href="beauty.html">Vzuu Beauty</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <ul class="list-unstyled">
+                  <li><a href="../blog.html">Blog</a></li>
+                  <li><a href="signin.html">Akun</a></li>
+                  <li><a href="../hubungi-kami.html">Hubungi Kami</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mt-3 mt-md-0">
+                <ul class="list-unstyled">
+                  <li><a href="account.html?#konfirmasi">Konfirmasi Pembayaran</a></li>
+                  <li><a href="../terms-condition.html">Syarat & Ketentuan</a></li>
+                  <li><a href="../privacy.html">Kebijakan Privasi</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3 mt-5" style="background-color: #7a6d65">
+        <p class="text-white m-0 text-regular">
+          2024. Vzuu. All Right Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div id="cartModal" class="modal fade custom-modal" tabindex="-1" aria-labelledby="cartModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="promo-banner">
+            <h6 class="text-medium p-3 fs-6" style="font-size: medium;">Hemat 10% bagi pelanggan baru dengan kode
+              WELCOME10</h6>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="btn-close" style="position: absolute; top: 15px; right: 15px;"
+              data-bs-dismiss="modal" aria-label="Close"></button>
+            <h6 class="mb-4"><span class="fs-5 text-demibold text-grey">Keranjang</span> <span
+                class="fs-6 text-medium text-grey" id="cart-items-count">(0 items)</span></h6>
+            <div id="cart-items-container">
+            </div>
+            <hr>
+            <div class="suggestions mt-4">
+              <h5 class="text-regular text-grey">LENGKAPI RITUAL KECANTIKAN ANDA</h5>
+              <div class="d-flex align-items-center justify-content-center mt-3">
+                <img src="../assets/img/172.png" alt="Suggested Product">
+                <div class="ms-3 w-75">
+                  <h6 class="text-grey text-demibold">Mild & Deep Cleansing Pad</h6>
+                  <p class="text-brown text-demibold">Rp 479.000,00</p>
+                </div>
+                <button class="ms-auto custom-button-brown" onclick="checkout(1,1)">TAMBAH</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center text-center">
+            <a href="./checkout.html" type="button" class="custom-button-brown text-regular w-100"
+              style="padding: 10px 40px 10px 40px;" id="checkout-button"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="../assets/global.js"></script>
+<script src="../assets/js/cart.js"></script>
+<!-- Modal Cart -->
+
+
+
+<script>
+  // Get the anchor link from the URL
+  const anchorLink = window.location.hash;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const firstLink = document.querySelector('.sidebar a[href="#first"]');
+    const addressLink = document.querySelector('.sidebar a[href="#alamat"]');
+    const orderLink = document.querySelector('.sidebar a[href="#pesanan-saya"]');
+    const confirm = document.querySelector('.sidebar a[href="#konfirmasi"]');
+    const viewButtons = document.querySelectorAll('.lihat-pesanan');
+
+    if (anchorLink != '#konfirmasi') {
+      document.getElementById('alamat').style.display = 'none';
+      document.getElementById('simpan').style.display = 'block';
+      document.getElementById('batal').style.display = 'block';
+    }
+
+    function removeActiveClass() {
+      document.querySelectorAll('.sidebar a, .lihat-pesanan').forEach(el => {
+        el.classList.remove('active');
+      });
+    }
+
+    function hideAllSections() {
+      const sections = ['orderDetails', 'orderList', 'firstForms', 'addressForm', 'konfirmasiPesanan', 'konfirmasi-bayar', 'alamat', 'simpan', 'batal'];
+      sections.forEach(section => {
+        document.getElementById(section).style.display = 'none';
+      });
+    }
+
+    viewButtons.forEach(function (button) {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        hideAllSections();
+        document.getElementById('orderDetails').style.display = 'block';
+        removeActiveClass();
+      });
+    });
+
+    if (firstLink) {
+      firstLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        hideAllSections();
+        document.getElementById('firstForms').style.display = 'block';
+        document.getElementById('simpan').style.display = 'block';
+        document.getElementById('batal').style.display = 'block';
+        removeActiveClass();
+        firstLink.classList.add('active');
+      });
+    }
+
+    if (addressLink) {
+      addressLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        hideAllSections();
+        document.getElementById('addressForm').style.display = 'block';
+        document.getElementById('alamat').style.display = 'block';
+        document.getElementById('batal').style.display = 'block';
+        removeActiveClass();
+        addressLink.classList.add('active');
+      });
+    }
+
+    if (orderLink) {
+      orderLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        hideAllSections();
+        document.getElementById('orderList').style.display = 'block';
+        removeActiveClass();
+        orderLink.classList.add('active');
+      });
+    }
+
+    if (confirm) {
+      confirm.addEventListener('click', function (event) {
+        event.preventDefault();
+        hideAllSections();
+        document.getElementById('konfirmasiPesanan').style.display = 'block';
+        document.getElementById('konfirmasi-bayar').style.display = 'block';
+        removeActiveClass();
+        confirm.classList.add('active');
+      });
+    }
+
+    // Check if the anchor link matches the expected value
+    if (anchorLink === '#konfirmasi') {
+      // Load the form
+      document.getElementById('konfirmasiPesanan').style.display = 'block';
+      document.getElementById('firstForms').style.display = 'none';
+      document.getElementById('orderList').style.display = 'none';
+      document.getElementById('addressForm').style.display = 'none';
+      document.getElementById('orderDetails').style.display = 'none';
+      document.getElementById('simpan').style.display = 'none';
+      document.getElementById('batal').style.display = 'none';
+      document.getElementById('alamat').style.display = 'none';
+      document.getElementById('konfirmasi-bayar').style.display = 'block';
+
+      // Set the active class on the corresponding link
+      const confirmLink = document.querySelector('a.text-demibold[href="#konfirmasi"]');
+      if (confirmLink) {
+        confirmLink.classList.add('active');
+      }  // Add active class to the parent element (li)
+    } else if (anchorLink === '#pesanan-saya') {
+      if (orderLink) {
+
+        hideAllSections();
+        document.getElementById('orderList').style.display = 'block';
+        removeActiveClass();
+        orderLink.classList.add('active');
+
+      }
+
+    }
+  });
+
+  function hideOrderDetails() {
+    document.getElementById('orderDetails').style.display = 'none';
+    document.getElementById('orderList').style.display = 'block';
+  }
+
+  $('.toggle-password').each(function () {
+    var toggleImage = $(this).find('img');
+    var passwordInput = $(this).prev('input');
+
+    if (toggleImage.attr('src').indexOf('eye1.png') !== -1) {
+      passwordInput.attr('type', 'password');
+    } else {
+      passwordInput.attr('type', 'text');
+    }
+  });
+
+  $('.toggle-password').on('click', function () {
+    var passwordInput = $(this).prev('input');
+    var toggleImage = $(this).find('img');
+
+    if (passwordInput.attr('type') === 'text') {
+      passwordInput.attr('type', 'password');
+      toggleImage.attr('src', '../assets/img/eye1.png');
+    } else {
+      passwordInput.attr('type', 'text');
+      toggleImage.attr('src', '../assets/img/eye2.png');
+    }
+  });
+
+</script>
+
+</html>
