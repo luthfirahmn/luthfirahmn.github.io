@@ -2,6 +2,23 @@
     scroll-margin-top: 60px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 45px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px !important;
+        box-sizing: border-box;
+    }
+}
+
 @font-face {
     font-family: 'Avenir';
     src: url('./fonts/AvenirNext-Regular.ttf') format('truetype');

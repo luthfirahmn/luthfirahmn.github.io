@@ -210,13 +210,13 @@
     </nav>
 
     <div class="container p-0 " style="margin-bottom: 200px;">
-        <div class="text-center pt-5" style="margin-top: 120px; margin-bottom: 20px;">
+        <div class="text-center pt-5" style="margin-top: 90px; margin-bottom: 20px;">
             <h6 class=" text-regular text-grey">SEDIKIT LAGI!</h6>
             <h3 class="pink text-demibold">
                 Checkout
             </h3>
         </div>
-        <div class="row p-4 p-lg-0">
+        <div class="row  p-lg-0">
 
             <div class="col-md-6 d-lg-none ">
                 <div class="order-summary">
@@ -260,12 +260,22 @@
 
                 <h5 class="text-demibold text-grey mb-4">Alamat tagihan (Pelanggan Baru)</h5>
                 <form>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row d-none d-lg-block">
                         <div class="col-md-6">
                             <label for="firstName" class=" text-grey text-medium required">Nama Depan</label>
                             <input type="text" class="form-control" id="firstName" required>
                         </div>
                         <div class="col-md-6">
+                            <label for="lastName" class=" text-grey text-medium required">Nama Belakang</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class=" d-lg-none">
+                        <div class="mb-3 ">
+                            <label for="firstName" class=" text-grey text-medium required">Nama Depan</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="mb-3 ">
                             <label for="lastName" class=" text-grey text-medium required">Nama Belakang</label>
                             <input type="text" class="form-control" id="lastName" required>
                         </div>

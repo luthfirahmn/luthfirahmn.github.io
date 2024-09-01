@@ -229,7 +229,7 @@
         </div>
     </nav>
 
-    <img src="../assets/img/mask-grey.png" style="z-index: -1; position: absolute; ">
+    <img src="../assets/img/mask-grey.png" class="d-none d-lg-block" style="z-index: -1; position: absolute; ">
 
     <div style="margin-top: 7rem;">
 
@@ -412,24 +412,28 @@
             <hr class="mt-5" style="border-top: 1px solid #ccc;">
 
             <div class="d-flex justify-content-center align-items-center flex-column animatable fadeInUp">
-                <ul class="nav nav-pills custom-tab mt-4 d-none d-lg-block" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="benefits-tab" data-bs-toggle="tab"
-                            data-bs-target="#benefits" type="button" role="tab" aria-controls="benefits"
-                            aria-selected="true">Manfaat Produk</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients"
-                            type="button" role="tab" aria-controls="ingredients" aria-selected="false">Bahan
-                            Utama</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
-                            data-bs-target="#instructions" type="button" role="tab" aria-controls="instructions"
-                            aria-selected="false">Petunjuk
-                            Penggunaan</button>
-                    </li>
-                </ul>
+                <div class="d-none d-lg-block">
+                    <ul class="nav nav-pills custom-tab mt-4 " id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="benefits-tab" data-bs-toggle="tab"
+                                data-bs-target="#benefits" type="button" role="tab" aria-controls="benefits"
+                                aria-selected="true">Manfaat Produk</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="ingredients-tab" data-bs-toggle="tab"
+                                data-bs-target="#ingredients" type="button" role="tab" aria-controls="ingredients"
+                                aria-selected="false">Bahan
+                                Utama</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
+                                data-bs-target="#instructions" type="button" role="tab" aria-controls="instructions"
+                                aria-selected="false">Petunjuk
+                                Penggunaan</button>
+                        </li>
+                    </ul>
+                </div>
+
 
                 <div class="carousel   slide mt-4 d-lg-none " id="carousel2" data-min-per-slide="1" id="myTab"
                     role="tablist" style="width: 100%;">
@@ -522,24 +526,25 @@
 
     <hr class="px-10" style="border-top: 1px solid #ccc;">
 
-    <div class="row py-5 position-relative">
-        <div class="col-md-6 d-flex align-items-center justify-content-center animatable fadeInUp">
-            <img src="../assets/img/woman.png" class="img-fluid w-50" alt="Image Description">
+
+    <div class="row py-5 position-relative px-4">
+        <div class="col-md-6 d-flex align-items-center justify-content-center animatable fadeInUp ">
+            <img src="../assets/img/woman.png" class="img-fluid img-foot" alt="Image Description">
         </div>
 
-        <div class="position-absolute text-center" style="top:10rem; left:300px">
+        <div class="text-center text-foot">
             <p class=" text-regular mb-0">
                 Rasakan Perawatan Kulit Istimewa dengan VZUU <br>Mild & Deep Cleansing Pad.
             </p>
-            <div class="animatable fadeInUp" style="margin-top:10rem">
-                <img src="../assets/img/skincare2.png" class="img-fluid w-35" alt="Image Description">
+            <div class="animatable fadeInUp text-foot2">
+                <img src="../assets/img/skincare2.png" class="img-fluid img-foot2 " alt="Image Description">
             </div>
         </div>
     </div>
 
-    <div class="row" style="margin-top: 10rem;">
-        <div class="col-md-6 d-flex align-items-center justify-content-center animatable fadeInUp">
-            <img src="../assets/img/skincare.png" class="img-fluid w-25" alt="Image Description">
+    <div class="row px-4">
+        <div class="col-md-6 d-flex animatable fadeInUp text-foot3">
+            <img src="../assets/img/skincare.png" class="img-fluid img-foot3" alt="Image Description">
         </div>
     </div>
 

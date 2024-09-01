@@ -14,8 +14,68 @@
         /* Add some spacing between tabs */
     }
 
+    .text-foot {
+        font-size: 12px;
+        top: 0 !important;
+        left: 0 !important;
+        position: relative !important;
+        margin-top: 40px;
+        padding: 0 10px 0 10px !important;
+    }
+
+    .text-foot2 {
+        margin-top: 2rem !important;
+    }
+
+    .img-foot {
+        width: 60% !important;
+        margin-right: 5rem;
+    }
+
+    .img-foot2 {
+        width: 100% !important;
+    }
+
+    .text-foot3 {
+
+        justify-content: end !important;
+        align-items: end !important;
+    }
+
+    .img-foot3 {
+        width: 35% !important;
+    }
+
 }
 
+.text-foot3 {
+
+    justify-content: center;
+    align-items: center;
+}
+
+.img-foot3 {
+    width: 25%;
+}
+
+.img-foot2 {
+    width: 25%;
+}
+
+.img-foot {
+    width: 50%;
+}
+
+.text-foot2 {
+    margin-top: 10rem;
+}
+
+.text-foot {
+    top: 10rem;
+    left: 300px;
+    position: absolute;
+
+}
 
 
 .carousel-inner .carousel-item {
