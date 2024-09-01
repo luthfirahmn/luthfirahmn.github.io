@@ -48,7 +48,7 @@
   .signature {
     position: absolute;
     bottom: 0;
-    right: 10;
+    left: 7rem;
     z-index: 2;
   }
 
