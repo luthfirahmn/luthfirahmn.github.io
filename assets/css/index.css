@@ -44,7 +44,8 @@
   z-index: 2;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
+
   .signature {
     position: absolute;
     bottom: 0;
