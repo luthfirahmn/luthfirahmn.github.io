@@ -1,5 +1,5 @@
 .container-fluid {
-  padding-right: 0;
+  padding-right: 20px;
   margin: 0;
   box-sizing: border-box;
   justify-content: start;
@@ -44,13 +44,17 @@
   z-index: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+  .row {
+    margin: 0 !important;
+  }
 
   .signature {
     position: absolute;
     bottom: 0;
     left: 7rem;
     z-index: 2;
+    width: 150px;
   }
 
   .col-md-6 {

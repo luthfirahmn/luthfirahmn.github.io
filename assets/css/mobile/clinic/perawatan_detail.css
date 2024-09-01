@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 640px) {
     .head {
         font-size: 30px;
     }
@@ -35,7 +35,7 @@
     height: 320px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .carousel-inner .carousel-item>div {
         display: none;
     }

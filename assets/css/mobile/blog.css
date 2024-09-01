@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 640px) {
 
     .divider {
         margin-top: 2.5rem !important;
@@ -52,7 +52,7 @@
     padding: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .carousel-inner .carousel-item>div {
         display: none;
     }
@@ -73,7 +73,7 @@
     display: flex;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
 
     /* .carousel-inner .carousel-item-right.active,
     .carousel-inner .carousel-item-next,

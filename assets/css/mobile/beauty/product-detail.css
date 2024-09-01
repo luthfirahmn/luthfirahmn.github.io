@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .text-detail {
         text-align: justify;
     }
@@ -44,7 +44,7 @@
     padding: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .carousel-inner .carousel-item>div {
         display: none;
     }
@@ -70,7 +70,7 @@
     display: flex;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
 
     .carousel-inner .carousel-item-right.active,
     .carousel-inner .carousel-item-next,
@@ -103,7 +103,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
 
     .col-md-6.text-center {
         padding-top: 5vh !important;

@@ -5,7 +5,7 @@
 }
 
 /* Mobile styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 640px) {
     .button-container {
         display: block;
         margin: 0 auto;
